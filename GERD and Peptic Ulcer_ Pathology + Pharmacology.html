@@ -1,0 +1,1239 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>GERD and Peptic Ulcer: Pathology + Pharmacology</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Cairo:wght@400;600;700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+/* Layout concept: one 2-hour study block as a page. Timeline clock, then summary plates,
+   a build-it-yourself drawing, and flip cards. Arabic explanations sit in RTL panels beside English content. */
+:root{
+  --bg:#EAF0F4; --surface:#FFFFFF; --surface2:#F3F7FA; --ink:#0B2030; --muted:#566B7A; --line:#D2DEE6; --dot:#C9D7E0;
+  --accent:#0A8F9C; --hot:#E5483A; --ok:#1E9A66; --warn:#C98300;
+  --m-rect:#0A8F9C; --m-eo:#D98A06; --m-io:#D6335F; --m-ta:#4A5BD8;
+  --shadow:0 1px 2px rgba(11,32,48,.06),0 10px 28px rgba(11,32,48,.08);
+  --f-display:'Bricolage Grotesque','Avenir Next','Segoe UI',system-ui,sans-serif;
+  --f-body:'Instrument Sans','Segoe UI',system-ui,sans-serif;
+  --f-mono:'JetBrains Mono',ui-monospace,Menlo,monospace;
+  --f-ar:'Cairo','Segoe UI','Noto Naskh Arabic',Tahoma,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#08131B; --surface:#0F1E29; --surface2:#142632; --ink:#E7F1F6; --muted:#8FA6B5; --line:#203442; --dot:#173040;
+  --accent:#38C7D4; --hot:#FF6B5B; --ok:#4FD39B; --warn:#F2B545;
+  --m-rect:#38C7D4; --m-eo:#F5B83D; --m-io:#FF6F91; --m-ta:#8E9BFF;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 28px rgba(0,0,0,.35); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#08131B; --surface:#0F1E29; --surface2:#142632; --ink:#E7F1F6; --muted:#8FA6B5; --line:#203442; --dot:#173040;
+  --accent:#38C7D4; --hot:#FF6B5B; --ok:#4FD39B; --warn:#F2B545;
+  --m-rect:#38C7D4; --m-eo:#F5B83D; --m-io:#FF6F91; --m-ta:#8E9BFF;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 28px rgba(0,0,0,.35); color-scheme:dark}
+
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 var(--f-body);
+  background-image:radial-gradient(var(--dot) 1px,transparent 1.2px);background-size:22px 22px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:20px 80px}
+.wrap{max-width:1040px;margin:0 auto}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+h1,h2,h3,h4{font-family:var(--f-display);margin:0;text-wrap:balance;letter-spacing:-.01em}
+p{margin:0}
+.mono{font-family:var(--f-mono);font-variant-numeric:tabular-nums}
+.ar{direction:rtl;text-align:right;font-family:var(--f-ar);font-size:16px;line-height:1.85}
+@keyframes rise{from{opacity:.25;transform:translateY(14px)}to{opacity:1;transform:none}}
+.rise{animation:rise .65s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(var(--d,0)*80ms)}
+
+/* nav */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;display:flex;gap:8px;padding:10px 0;margin-bottom:6px;overflow-x:auto;background:linear-gradient(var(--bg) 75%,transparent)}
+.nav button{white-space:nowrap;border:1px solid var(--line);background:var(--surface);border-radius:99px;padding:8px 16px;font-weight:600;font-size:13px;transition:background .2s,color .2s}
+.nav button.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+
+/* hero */
+.hero{padding:18px 0 8px}
+.crumbs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.crumbs span{font:600 11px/1 var(--f-mono);letter-spacing:.06em;padding:6px 10px;border-radius:99px;background:var(--surface);border:1px solid var(--line);color:var(--muted)}
+.crumbs .hi{background:color-mix(in srgb,var(--hot) 14%,var(--surface));color:var(--hot);border-color:transparent}
+.crumbs .tm2{color:var(--accent)}
+h1{font-size:clamp(36px,6.4vw,66px);line-height:.98;font-weight:800;margin-bottom:16px}
+h1 span{color:var(--accent)}
+.goal{display:grid;gap:6px;padding:16px 18px;background:var(--surface);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);max-width:760px}
+.goal p:first-child{color:var(--muted)}
+.sec{margin-top:46px}
+.sec-h{display:flex;align-items:end;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+.sec-h h2{font-size:clamp(25px,4vw,34px);font-weight:800}
+.sec-h p{color:var(--muted);font-size:14px;max-width:50ch}
+
+/* clock + timeline */
+.clock{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:center;padding:18px;background:var(--surface);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);margin-bottom:18px}
+.bigring{position:relative;width:132px;height:132px}
+.bigring svg{width:100%;height:100%;transform:rotate(-90deg)}
+.bigring .t{fill:none;stroke:var(--line);stroke-width:10}
+.bigring .f{fill:none;stroke:var(--accent);stroke-width:10;stroke-linecap:round;transition:stroke-dashoffset .9s linear}
+.bigring .c{position:absolute;inset:0;display:grid;place-content:center;text-align:center}
+.bigring .c b{font:700 24px/1 var(--f-mono)}
+.bigring .c span{font-size:11px;color:var(--muted)}
+.clock h3{font-size:20px;font-weight:800}
+.clock .now{color:var(--muted);font-size:14px;margin:4px 0 12px}
+.ctrls{display:flex;gap:8px;flex-wrap:wrap}
+.btn{border:1px solid var(--line);background:var(--surface2);border-radius:99px;padding:9px 16px;font:600 13px var(--f-mono)}
+.btn.go{background:var(--ink);color:var(--bg);border-color:var(--ink);min-width:96px}
+.tl{list-style:none;margin:0;padding:0;display:grid;gap:0;position:relative}
+.step{display:grid;grid-template-columns:78px 22px 1fr;gap:0 14px;padding-bottom:14px;position:relative}
+.step .tm{font:600 12px/1.2 var(--f-mono);color:var(--muted);text-align:right;padding-top:16px}
+.step .tm b{display:block;color:var(--ink);font-size:13px}
+.step .spine{position:relative;display:flex;justify-content:center}
+.step .spine::before{content:"";position:absolute;top:0;bottom:-14px;width:2px;background:var(--line)}
+.step:last-child .spine::before{bottom:50%}
+.step .node{position:relative;z-index:1;margin-top:16px;width:16px;height:16px;border-radius:50%;background:var(--surface);border:3px solid var(--line);transition:background .3s,border-color .3s}
+.step.cur .node{border-color:var(--accent);background:var(--accent);animation:ping 1.8s ease-out infinite}
+@keyframes ping{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--accent) 55%,transparent)}100%{box-shadow:0 0 0 12px transparent}}
+.step.done .node{background:var(--ok);border-color:var(--ok)}
+.scard{padding:14px 16px;background:var(--surface);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);display:grid;gap:8px;transition:border-color .3s}
+.step.cur .scard{border-color:var(--accent)}
+.scard .top{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.scard h4{font-size:17px;font-weight:800}
+.scard .len{font:600 11px/1 var(--f-mono);padding:5px 8px;border-radius:99px;background:var(--surface2);color:var(--muted)}
+.scard .en{font-size:14px;color:var(--muted)}
+.scard .ar{padding-top:8px;border-top:1px dashed var(--line)}
+.tick{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted);background:none;border:0;padding:0;justify-self:start}
+.tick i{width:20px;height:20px;border-radius:6px;border:2px solid var(--line);display:grid;place-items:center;transition:background .2s,border-color .2s}
+.tick svg{width:12px;height:12px;opacity:0}
+.tick svg path{fill:none;stroke:var(--surface);stroke-width:3.4;stroke-linecap:round;stroke-linejoin:round}
+.step.done .tick i{background:var(--ok);border-color:var(--ok)}
+.step.done .tick svg{opacity:1}
+
+/* summary */
+.mgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.mus{--c:var(--m-eo);padding:18px;background:var(--surface);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);display:grid;gap:10px;align-content:start}
+.mus header{display:flex;align-items:center;gap:10px}
+.mus .sw{width:14px;height:14px;border-radius:50%;background:var(--c)}
+.mus h3{font-size:22px;font-weight:800}
+.mus .layer-l{margin-left:auto;font:600 11px var(--f-mono);color:var(--c)}
+.rowx{display:grid;grid-template-columns:86px 1fr;gap:4px 12px;font-size:14px;padding-top:8px;border-top:1px solid var(--line)}
+.rowx b{font:600 11px/1.6 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--c)}
+.rowx ul{margin:0;padding-left:16px}
+.mus .ar{margin-top:2px;padding:10px 12px;border-radius:14px;background:color-mix(in srgb,var(--c) 10%,var(--surface))}
+.hooks{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
+.hook{padding:16px;border-radius:18px;background:var(--ink);color:var(--bg);display:grid;gap:8px}
+.hook b{font:800 26px/1.1 var(--f-display)}
+.hook span{font-size:13px;opacity:.85}
+.hook .ar{font-size:14px;line-height:1.7;opacity:.95;padding-top:8px;border-top:1px solid color-mix(in srgb,var(--bg) 25%,transparent)}
+.acts{margin-top:14px;padding:18px;background:var(--surface);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow)}
+.acts h3{font-size:20px;margin-bottom:10px}
+.act{display:grid;grid-template-columns:1fr 1fr;gap:6px 18px;padding:9px 0;border-top:1px solid var(--line);font-size:14px;align-items:start}
+.act .ar{font-size:15px;line-height:1.7}
+.rtab{margin-top:14px;padding:18px;background:var(--surface);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow)}
+.rtab-h{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-bottom:10px}
+.rtab h3{font-size:20px}
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:620px;font-size:13.5px}
+th{font:600 11px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-align:left;padding:8px 10px;border-bottom:2px solid var(--line)}
+td{padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+td.m{font-weight:700;white-space:nowrap}
+td.m i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:8px}
+td.rv{cursor:pointer;transition:filter .3s,background .3s}
+.blind td.rv:not(.shown){filter:blur(7px);background:var(--surface2);user-select:none}
+
+/* drawing */
+.draw{display:grid;grid-template-columns:1.1fr 1fr;gap:16px;align-items:start}
+.canvas{background:var(--surface);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);padding:8px}
+.canvas svg{display:block;width:100%;height:auto}
+.sk{fill:none;stroke:var(--muted);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.sk.dash{stroke-dasharray:5 6;opacity:.7}
+.dot-s{fill:var(--muted)}
+.layer{transition:opacity .6s}
+.layer .dr{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1s ease}
+.layer.on .dr{stroke-dashoffset:0}
+.layer .fl{opacity:0;transition:opacity .7s .3s}
+.layer.on .fl{opacity:1}
+.layer .lab{opacity:0;transition:opacity .5s .6s}
+.layer.on .lab{opacity:1}
+.layer.off{opacity:0}
+.svg-past .layer.past{opacity:.5}
+.svg-past .layer.past .lab{opacity:0}
+.lab text{font:600 14px var(--f-body);fill:var(--ink)}
+.lab .sub{font:500 12px var(--f-body);fill:var(--muted)}
+.lab line{stroke:var(--muted);stroke-width:1.2}
+.lab circle{fill:var(--muted)}
+.hatch{fill:none;stroke-width:2.2;stroke-linecap:round}
+.stepper{display:grid;gap:12px}
+.dots{display:flex;gap:8px;flex-wrap:wrap}
+.dots button{width:38px;height:38px;border-radius:50%;border:2px solid var(--line);background:var(--surface);font:700 13px var(--f-mono);transition:background .2s,color .2s,border-color .2s}
+.dots button.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.dots button.seen{border-color:var(--ok)}
+.sbox{padding:18px;background:var(--surface);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);display:grid;gap:10px;min-height:310px;align-content:start}
+.sbox .k{font:600 11px/1 var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+.sbox h3{font-size:22px;font-weight:800}
+.sbox .en{font-size:14px;color:var(--muted)}
+.sbox .ar{padding:12px 14px;border-radius:14px;background:var(--surface2)}
+.sbox .note{font-size:12px;color:var(--muted)}
+.snav{display:flex;gap:8px;flex-wrap:wrap}
+
+/* cards */
+.deck-top{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-bottom:12px}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{border:1px solid var(--line);background:var(--surface);border-radius:99px;padding:7px 13px;font-weight:600;font-size:13px}
+.chip.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.score{font:600 12px var(--f-mono);color:var(--muted)}
+.score b{color:var(--ok)}.score u{text-decoration:none;color:var(--warn);font-weight:700}
+.pbar{height:6px;border-radius:99px;background:var(--line);overflow:hidden;margin-bottom:14px}
+.pbar i{display:block;height:100%;background:var(--accent);transition:width .4s}
+.flip{perspective:1400px}
+.inner{display:grid;transform-style:preserve-3d;transition:transform .6s cubic-bezier(.3,.8,.3,1)}
+.flip.on .inner{transform:rotateY(180deg)}
+.face{grid-area:1/1;backface-visibility:hidden;-webkit-backface-visibility:hidden;min-height:300px;padding:22px;border-radius:24px;border:1px solid var(--line);background:var(--surface);box-shadow:var(--shadow);display:grid;gap:12px;align-content:start;text-align:left;width:100%}
+.face.back{transform:rotateY(180deg);background:var(--surface2)}
+.flip.on .front{pointer-events:none}
+.flip:not(.on) .back{pointer-events:none}
+.face .tagr{display:flex;justify-content:space-between;gap:10px;align-items:center}
+.ty{font:700 11px/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;padding:6px 10px;border-radius:99px;background:var(--surface2);color:var(--accent)}
+.face.back .ty{background:var(--surface)}
+.cn{font:600 12px var(--f-mono);color:var(--muted)}
+.face h3{font-size:clamp(20px,3.2vw,26px);font-weight:700;line-height:1.3}
+.face .hintx{font-size:12.5px;color:var(--muted)}
+.opts{display:grid;gap:8px}
+.opts div{padding:10px 14px;border:1px solid var(--line);border-radius:12px;font-size:15px}
+.face .ans{font-size:16px;line-height:1.6}
+.face .ans ul{margin:0;padding-left:20px}
+.face .ar{padding:12px 14px;border-radius:14px;background:var(--surface)}
+.rate{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
+.rate .btn{flex:1;min-width:130px;padding:13px;font-size:14px;text-align:center}
+.rate .got{background:var(--ok);color:var(--surface);border-color:var(--ok)}
+.rate .rev{background:color-mix(in srgb,var(--warn) 20%,var(--surface));color:var(--warn);border-color:transparent}
+.rate .btn[disabled]{opacity:.4;cursor:not-allowed}
+.dnav{display:flex;gap:8px;justify-content:space-between;margin-top:12px;flex-wrap:wrap}
+.foot{margin-top:46px;font-size:13px;color:var(--muted);max-width:70ch}
+
+@media (max-width:820px){
+  .draw{grid-template-columns:1fr}
+  .mgrid{grid-template-columns:1fr}
+  .hooks{grid-template-columns:1fr}
+  .act{grid-template-columns:1fr}
+  .clock{grid-template-columns:1fr;justify-items:start}
+}
+@media (max-width:520px){
+  .step{grid-template-columns:44px 20px 1fr;gap:0 10px}
+  .step .tm{font-size:11px}
+  .rowx{grid-template-columns:1fr}
+  .face{min-height:340px;padding:18px}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+
+<style>
+:root{--h1:#D98A06;--h2:#D6335F;--h3:#4A5BD8;--h4:#0A8F9C;--h5:#2E9E5B;--h6:#E26A2C;--h7:#E5483A}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--h1:#F5B83D;--h2:#FF6F91;--h3:#8E9BFF;--h4:#38C7D4;--h5:#5FD58C;--h6:#FF9A5C;--h7:#FF6B5B}}
+:root[data-theme="dark"]{--h1:#F5B83D;--h2:#FF6F91;--h3:#8E9BFF;--h4:#38C7D4;--h5:#5FD58C;--h6:#FF9A5C;--h7:#FF6B5B}
+.sub-h{font:800 22px var(--f-display);margin:30px 0 12px}
+.sub-h small{display:block;font:500 13px var(--f-body);color:var(--muted);margin-top:2px}
+.full{grid-column:1/-1}
+.cmpwrap{overflow-x:auto;margin-top:4px}
+.cmp{min-width:560px}
+.cmp th:first-child{width:96px}
+.cmp td b{font:600 11px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--c)}
+.cmp ul{margin:0;padding-left:16px}
+.cmp td.pa{background:color-mix(in srgb,var(--m-rect) 7%,transparent)}
+.cmp td.sy{background:color-mix(in srgb,var(--m-io) 7%,transparent)}
+.clin{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.cl{padding:16px;border-radius:18px;background:var(--surface);border:1px solid var(--line);display:grid;gap:6px;align-content:start}
+.cl b{font:800 18px var(--f-display)}
+.cl p{font-size:14px}
+.cl .ar{font-size:15px;line-height:1.75;padding-top:8px;border-top:1px dashed var(--line)}
+.hooks4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:14px}
+.hooks4 .hook b{font-size:21px}
+@media (max-width:980px){.hooks4{grid-template-columns:1fr 1fr}}
+@media (max-width:820px){.clin{grid-template-columns:1fr}.hooks4{grid-template-columns:1fr}}
+.canvas svg[hidden]{display:none}
+.sk.thin{stroke-width:1.6}
+.arrowp{fill:none;stroke-width:2.6;stroke-linecap:round}
+.note-t{font:700 14px var(--f-body)}
+.note-s{font:500 12px var(--f-body);fill:var(--muted)}
+.bigring .c b{display:block;font-size:21px}
+.bigring .c span{display:block;margin-top:4px}
+@media (max-width:640px){.canvas{overflow-x:auto}.canvas svg{min-width:540px}}
+.drawhd{font:700 12px var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin:22px 0 8px}.drawblk{margin-bottom:10px}</style>
+
+<div class="wrap">
+  <nav class="nav" id="nav" aria-label="Sections"><button data-go="s-time" class="on">Route</button><button data-go="s-sum">Notes</button><button data-go="s-cmp">Connect</button><button data-go="s-cards">Question cards</button></nav>
+
+  <header class="hero">
+    <div class="crumbs rise"><span>DHB202</span><span>Pathology</span><span>Pharmacology</span><span class="hi">Connected</span><span>Tue 27 Oct</span></div>
+    <h1 class="rise" style="--d:1">Pathology and pharmacology,<br><span>learned as one story</span></h1>
+    <div class="goal rise" style="--d:2">
+      <p>GERD, peptic ulcer, stomach tumours, IBD, salivary tumours and the liver: each pathology point is placed next to the drug or action that answers it.</p>
+      <p class="ar" lang="ar">الهدف: دمج الباثولوجي والفارما معًا. كل نقطة مرضية توضع بجانب الدواء الذي يعالجها: GERD والقرحة الهضمية ثم أورام المعدة والقولون والغدد اللعابية والكبد.</p>
+    </div>
+  </header>
+
+  <section class="sec" id="s-time">
+    <div class="sec-h"><h2>Your 4-hour route</h2><p>Press Start and the page follows the clock. Tick each step when done.</p></div>
+    <div class="clock">
+      <div class="bigring"><svg viewBox="0 0 132 132" aria-hidden="true"><circle class="t" cx="66" cy="66" r="57"/><circle class="f" id="clRing" cx="66" cy="66" r="57" stroke-dasharray="358.1" stroke-dashoffset="358.1"/></svg><div class="c"><div><b id="clTxt">0:00:00</b><span id="clOf">of 1:30:00</span></div></div></div>
+      <div>
+        <h3 id="clStep">Ready when you are</h3>
+        <p class="now" id="clNow">Open the 3 PDFs next to this page and press Start.</p>
+        <div class="ctrls"><button class="btn go" id="clGo">Start</button><button class="btn" id="clReset">Reset</button></div>
+      </div>
+    </div>
+    <ol class="tl" id="tl"></ol>
+  </section>
+
+  <section class="sec" id="s-sum">
+    <div class="sec-h"><h2>Notes</h2><p>Pathology and pharmacology cards are labelled and sit side by side. Items marked * are my additions or a reading I am not fully sure about.</p></div>
+    <article class="mus full" style="--c:var(--m-io);margin-bottom:6px">
+      <header><span class="sw"></span><h3>The connected map: pathology on the left, the drug or action that answers it on the right</h3></header>
+      <div class="cmpwrap"><table class="cmp" style="min-width:640px"><thead><tr><th style="width:230px">Pathology says</th><th>Pharmacology answers</th></tr></thead><tbody>
+        <tr><td><b>GERD:</b> incompetent valve, sliding hernia</td><td class="pa">Prokinetics (raise upper-GIT motility and gastric emptying); lifestyle (head of bed up 20 cm, weight loss); Nissen fundoplication</td></tr>
+        <tr><td><b>GERD:</b> acid regurgitation, erosive oesophagitis</td><td class="sy">PPIs first choice; H2 blockers for rapid effect; antacids; vonoprazan (PCAB)</td></tr>
+        <tr><td><b>Barrett's</b> to adenocarcinoma; ulcers and strictures</td><td class="pa">Control acid early with a PPI*</td></tr>
+        <tr><td><b>Hyperacidity theory:</b> night HCl, duodenal ulcer</td><td class="sy">H2 blockers (basal and night acid, no nocturnal breakthrough) and PPIs</td></tr>
+        <tr><td><b>Infective theory:</b> H. pylori gastritis, ulcer</td><td class="pa">Triple (PPI + amoxicillin + clarithromycin) or quadruple (bismuth + metronidazole + tetracycline + PPI); less acid lets the antibiotics work</td></tr>
+        <tr><td><b>Neurogenic theory:</b> vagal impulses</td><td class="sy">Anticholinergics (pirenzepine, M1): weak, rarely used</td></tr>
+        <tr><td><b>Predisposing drugs:</b> salicylates, NSAIDs, steroids</td><td class="pa">NSAID rules: low dose, topical, add PPI or misoprostol, avoid steroids; misoprostol (PGE1) for NSAID ulcers</td></tr>
+        <tr><td><b>Alcohol, smoking, spices, stress</b>, major operations</td><td class="sy">Smoking raises HCl and lowers bicarbonate; stress-ulcer prophylaxis: IV H2 blocker, PPI, sucralfate</td></tr>
+        <tr><td><b>Zollinger-Ellison:</b> gastrin-producing pancreatic tumour</td><td class="pa">PPIs (listed use)</td></tr>
+        <tr><td><b>Weak defence:</b> mucus, bicarbonate, blood flow, PGs, NO</td><td class="sy">Cytoprotectives: misoprostol, sucralfate, bismuth, rebamipide</td></tr>
+        <tr><td><b>Atrophic gastritis, carcinoma, MALT lymphoma</b> (H. pylori)</td><td class="pa">Eradication therapy; but long-term PPI lowers acid: bacterial colonisation, nitroso compounds (animal data), low B12</td></tr>
+        <tr><td><b>Cirrhosis:</b> oesophageal varices bleed</td><td class="sy">PPIs are listed for bleeding oesophageal varices</td></tr></tbody></table></div>
+      <p class="ar" lang="ar">هذا هو الخيط الذي يربط المادتين: كل نظرية أو عامل في الباثولوجي له دواء يقابله في الفارماكولوجي. فرط الحموضة الليلي يقابله حاصرات H2، والعدوى بالملوية يقابلها العلاج الثلاثي أو الرباعي، والنظرية العصبية تقابلها مضادات الكولين، والأدوية المسببة (NSAIDs والستيرويد) تقابلها قواعد الوقاية والميزوبروستول، وضعف الدفاع المخاطي يقابله السوكرالفات والبزموث. وتذكّر أن PPI تُستعمل أيضًا في متلازمة زولينجر-إليسون ونزف دوالي المريء.</p>
+    </article>
+
+    <h3 class="sub-h">1. GERD and Barrett's oesophagus<small>Pathology first, then every drug that answers it.</small></h3>
+    <div class="mgrid">
+      <article class="mus full" style="--c:var(--m-eo)">
+        <header><span class="sw"></span><h3>Reflux oesophagitis and Barrett's</h3><span class="layer-l">PATHOLOGY</span></header>
+        <div class="rowx"><b>Definition</b><span>Incontinence of the oesophago-gastric valve: gastric acid regurgitates into the lower oesophagus</span></div>
+        <div class="rowx"><b>Associations</b><span>Genetic predisposition; usually with a sliding hernia</span></div>
+        <div class="rowx"><b>Clinical</b><span>Food regurgitation, heartburn, pain, dysphagia</span></div>
+        <div class="rowx"><b>Barrett's</b><span>In neglected GERD the epithelium becomes columnar or intestinal (metaplasia): single or multiple finger-like processes of columnar mucosa above the Z-line, salmon-pink</span></div>
+        <div class="rowx"><b>Complications</b><span>Peptic ulcers (small; pain referred to the back); bleeding from deep ulcers (haematemesis, melaena); fibrosis (stricture, dysphagia); dysplasia then adenocarcinoma</span></div>
+        <div class="rowx"><b>Sequence</b><span>Reflux oesophagitis, columnar metaplasia, dysplasia, carcinoma in situ, invasive cancer</span></div>
+        <p class="ar" lang="ar">عدم كفاءة الصمام بين المريء والمعدة يسبب ارتداد الحمض إلى أسفل المريء، وغالبًا مع فتق انزلاقي واستعداد وراثي. الأعراض: ارتداد الطعام وحرقة وألم وعسر بلع. في الحالات المهملة تتحول البطانة إلى عمودية أو معوية (مريء باريت: ألسنة وردية فوق خط Z). المضاعفات: قرحات صغيرة بألم ينتقل للظهر ونزف (قيء دموي أو براز أسود) وتليف مع تضيق وعسر بلع وخلل تنسج ثم سرطان غدي.</p>
+      </article>
+      <article class="mus" style="--c:var(--m-io)">
+        <header><span class="sw"></span><h3>Treatment approaches; H2 blockers versus PPIs</h3><span class="layer-l">PHARMA</span></header>
+        <div class="rowx"><b>1 Lifestyle</b><span>Raise head of bed 20 cm; lose weight; lower HCl triggers (smoking, spices, NSAIDs); exercise; no tight clothes</span></div>
+        <div class="rowx"><b>2 Drugs</b><span>Lower HCl (H2 blockers, PPIs); antacids; prokinetics</span></div>
+        <div class="rowx"><b>3 Surgery</b><span>Nissen fundoplication</span></div>
+        <div class="rowx"><b>H2 blockers</b><span>Rapid effect (preferred in an emergency); no nocturnal breakthrough</span></div>
+        <div class="rowx"><b>PPIs over H2</b><span>More effective (high response rate); more potent (low doses); prolonged (once daily); anti-Helicobacter therapy</span></div>
+        <div class="rowx"><b>Antacids</b><span>Magnesium hydroxide and sulphate</span></div>
+        <p class="ar" lang="ar">مراحل العلاج: (1) نمط الحياة: رفع رأس السرير 20 سم وإنقاص الوزن وتجنب التدخين والتوابل ومضادات الالتهاب وارتداء ملابس واسعة. (2) الأدوية: خفض الحمض (حاصرات H2 وPPI) ومضادات الحموضة والمحركات. (3) جراحة نيسن. حاصرات H2 أسرع (للطوارئ) وبلا اختراق ليلي، أما PPI فأقوى وأكثر فعالية وجرعة واحدة يوميًا ولها دور ضد الملوية.</p>
+      </article>
+      <article class="mus" style="--c:var(--h6)">
+        <header><span class="sw"></span><h3>Prokinetic drugs</h3><span class="layer-l">PHARMA</span></header>
+        <div class="rowx"><b>Definition</b><span>Drugs that raise motility of the upper GIT (not the lower) and gastric evacuation</span></div>
+        <div class="rowx"><b>5HT4 agonists</b><span>Mosapride, cisapride, renzapride: act in the enteric nervous system, cAMP up, ACh release up. ADR: 5HT4 in the heart prolongs QT, ventricular arrhythmia (obsolete)</span></div>
+        <div class="rowx"><b>D2 blockers</b><span>Metoclopramide, domperidone: block D2 in the GIT (main action, more motility); weak 5HT4 agonism; block D2 in the vomiting centre. ADR (D2 block in CNS): basal ganglia: parkinsonism; limbic system: emotional change (slide: "planted emotion"); pituitary: prolactin up (galactorrhoea, gynaecomastia)</span></div>
+        <div class="rowx"><b>Bethanechol</b><span>Like ACh but not hydrolysed by cholinesterase (long duration) and selective M3 (fewer ADRs). ADR: diarrhoea, colic; bladder effect*: relieves retention</span></div>
+        <div class="rowx"><b>Erythromycin</b><span>Acts on motilin receptors. ADR: rapid tolerance</span></div>
+        <p class="ar" lang="ar">المحركات تزيد حركة الجهاز الهضمي العلوي (وليس السفلي) وتسرّع إفراغ المعدة. ناهضات 5HT4 (موزابريد وسيزابريد) ترفع cAMP وتحرر الأسيتيل كولين، لكنها تطيل QT وتسبب اضطراب نظم فهي مهجورة. مضادات D2 (ميتوكلوبراميد ودومبيريدون) تزيد الحركة، وأعراضها الجانبية: باركنسونية (العقد القاعدية) وتغير الانفعال (الجهاز الحوفي) وارتفاع البرولاكتين (ثر اللبن وتثدي). بيثانيكول يشبه الأسيتيل كولين لكنه لا يتحلل ويختار M3. الإريثروميسين يعمل على مستقبلات الموتيلين ويحدث تحملًا سريعًا.</p>
+      </article>
+      <article class="mus full" style="--c:var(--h7)">
+        <header><span class="sw"></span><h3>Vonoprazan: potassium-competitive acid blocker (PCAB)</h3><span class="layer-l">PHARMA</span></header>
+        <div class="rowx"><b>Mechanism</b><span>Inhibits the H+/K+ ATPase enzyme system in a potassium-competitive, reversible manner</span></div>
+        <div class="rowx"><b>Advantages</b><span>Acid stable (no enteric coating); taken right before a meal (food does not matter); more effective and more potent than a PPI; more effective against H. pylori; rapid onset; longer effect (no night breakthrough); no drug interaction (no enzyme inhibition)</span></div>
+        <p class="ar" lang="ar">فونوبرازان يثبط مضخة ⁦H+⁩/⁦K+⁩ ATPase بشكل عكوس بمنافسة البوتاسيوم. مزاياه: ثابت في الحمض (لا يحتاج غلافًا معويًا) ويؤخذ قبل الوجبة مباشرة دون تأثر بالطعام، وأقوى وأكثر فعالية من PPI وأفضل ضد الملوية وأسرع بدءًا وأطول أثرًا (لا اختراق ليلي) وبلا تداخلات دوائية.</p>
+      </article>
+    </div>
+    <div class="drawhd">Draw it: step by step</div><div class="draw drawblk" data-svgs="svgA"><div class="canvas"><svg id="svgA" viewBox="0 0 640 440" role="img" aria-label="GERD and Barrett's oesophagus"></svg></div><div class="stepper"><div class="dots"></div><div class="sbox"></div><div class="snav"><button class="btn sPrev">Back</button><button class="btn go sNext">Next step</button><button class="btn sPlay">Play all</button></div></div></div>
+
+    <h3 class="sub-h">2. Peptic ulcer<small>Three theories on the pathology side; one drug class per theory on the pharmacology side.</small></h3>
+    <div class="mgrid">
+      <article class="mus" style="--c:var(--m-eo)">
+        <header><span class="sw"></span><h3>Site and predisposing factors</h3><span class="layer-l">PATHOLOGY</span></header>
+        <div class="rowx"><b>Cause</b><span>Inflammation by H. pylori, or erosion by gastric acid</span></div>
+        <div class="rowx"><b>Sites</b><span>Stomach; first part of duodenum; lower third of oesophagus; jejunum (in gastrojejunostomy); Meckel's diverticulum</span></div>
+        <div class="rowx"><b>Risk</b><span>Males, adults; H. pylori; alcohol, smoking, spicy food; salicylates (NSAIDs); hyperacidity; stress and major operations; blood group O; Zollinger-Ellison (gastrin-producing pancreatic tumour)</span></div>
+        <div class="rowx"><b>Drugs</b><span>Steroids and glucagon are ulcerogenic; oestrogen is protective</span></div>
+        <p class="ar" lang="ar">السبب: التهاب بالملوية أو تآكل بحمض المعدة. المواضع: المعدة والجزء الأول من الاثني عشر والثلث السفلي للمريء والصائم (بعد مفاغرة المعدة بالصائم) ورتج ميكل. عوامل الخطر: الذكور والبالغون والملوية والكحول والتدخين والتوابل والساليسيلات ومضادات الالتهاب وفرط الحموضة والإجهاد والعمليات الكبرى وفصيلة الدم O وورم البنكرياس المفرز للغاسترين. الستيرويد والجلوكاجون يسببان القرحة والإستروجين واقٍ.</p>
+      </article>
+      <article class="mus" style="--c:var(--m-ta)">
+        <header><span class="sw"></span><h3>Theories, picture, complications</h3><span class="layer-l">PATHOLOGY</span></header>
+        <div class="rowx"><b>Theories</b><span>Hyperacidity (HCl up, especially at night: duodenal ulcer). Infective (H. pylori: chronic gastritis, mucosal necrosis, ulcer). Neurogenic (vagal impulses: vasoconstriction, hypersecretion, hypermotility, loss of the mucin layer)</span></div>
+        <div class="rowx"><b>Gross</b><span>Usually single, round or oval (saddle-shaped on the lesser curvature), 0.5 to 3 cm, clear edge; surrounding mucosa flat or atrophic; serosa thick and opaque; regional nodes enlarged</span></div>
+        <div class="rowx"><b>Microscopic</b><span>Granulation tissue, necrotic tissue, inflammatory cells; base is fibrous tissue with the muscle layer completely destroyed; vessels at the base show endarteritis obliterans and venous thrombi</span></div>
+        <div class="rowx"><b>Complications</b><span>Haemorrhage (haematemesis, melaena); perforation (sub-diaphragmatic abscess, generalised peritonitis); scar contraction (pyloric stenosis with dilated stomach; lesser curvature: hour-glass deformity); penetration (adhesions, e.g. pancreas); malignant change in under 1%, in untreated ulcers over 3 cm</span></div>
+        <p class="ar" lang="ar">النظريات: فرط الحموضة (خاصة ليلًا: قرحة اثني عشرية)، العدوى (الملوية: التهاب معدة مزمن ثم نخر وقرحة)، العصبية (سيالات مبهمية: تضيق أوعية وفرط إفراز وفرط حركة وزوال طبقة المخاط). عيانيًا: قرحة مفردة مستديرة أو بيضاوية (سرجية على الانحناء الصغير) 0.5 إلى 3 سم بحافة واضحة. مجهريًا: نسيج حبيبي ونخر وخلايا التهابية وقاعدة ليفية مع تدمير الطبقة العضلية والتهاب باطنة الشرايين وخثرات وريدية. المضاعفات: نزف وانثقاب وتضيق بوابي (والساعة الرملية في الانحناء الصغير) واختراق للبنكرياس وتحول خبيث أقل من 1%.</p>
+      </article>
+      <article class="mus full" style="--c:var(--m-io)">
+        <header><span class="sw"></span><h3>Treatment approaches and the balance of factors</h3><span class="layer-l">PHARMA</span></header>
+        <div class="rowx"><b>Lower HCl</b><span>PPIs; H2 blockers; anticholinergics; PCABs; antacids (neutralise HCl)</span></div>
+        <div class="rowx"><b>Protect mucosa</b><span>Prostaglandin analogues; chelated bismuth salts; sucralfate; rebamipide</span></div>
+        <div class="rowx"><b>H. pylori</b><span>Antibiotics</span></div>
+        <div class="rowx"><b>Raise ulcer risk</b><span>H. pylori; drugs (NSAIDs, corticosteroids, theophylline, iron); stress; smoking (HCl up, bicarbonate down, vasoconstriction, fewer drugs absorbed); pepsin; food and drink (alcohol lowers PG; spicy food, cola, coffee)</span></div>
+        <div class="rowx"><b>Lower ulcer risk</b><span>Mucus; bicarbonate; blood flow; prostaglandins; nitric oxide; innate resistance</span></div>
+        <p class="ar" lang="ar">العلاج: خفض الحمض (PPI وحاصرات H2 ومضادات الكولين وPCAB ومضادات الحموضة)، حماية المخاطية (نظائر البروستاجلاندين والبزموث والسوكرالفات والريباميبايد)، وعلاج الملوية بالمضادات الحيوية. تزيد القرحة: الملوية والأدوية (NSAIDs والكورتيزون والثيوفيللين والحديد) والإجهاد والتدخين والبيبسين والكحول والتوابل والكولا والقهوة. وتقللها: المخاط والبيكربونات وتدفق الدم والبروستاجلاندين وأكسيد النيتريك.</p>
+      </article>
+      <article class="mus" style="--c:var(--m-io)">
+        <header><span class="sw"></span><h3>PPIs: members, action, uses</h3><span class="layer-l">PHARMA</span></header>
+        <div class="rowx"><b>Members</b><span>Omeprazole, pantoprazole, rabeprazole, lansoprazole (most potent), esomeprazole, dexlansoprazole</span></div>
+        <div class="rowx"><b>Action</b><span>Prodrugs that become active; bind the H+/K+ ATPase of parietal cells irreversibly (stable covalent bond; about 18 h to resynthesise the enzyme): about 90% less HCl</span></div>
+        <div class="rowx"><b>Uses</b><span>GERD (first choice) and erosive oesophagitis; Zollinger-Ellison; bleeding oesophageal varices; NSAID ulcers (prevention and treatment); stress-ulcer prophylaxis; H. pylori (with antibiotics); prevention of aspiration pneumonia</span></div>
+        <p class="ar" lang="ar">الأعضاء: أوميبرازول وبانتوبرازول ورابيبرازول ولانسوبرازول (الأقوى) وإيزوميبرازول وديكسلانسوبرازول. أدوية أولية ترتبط بمضخة ⁦H+⁩/⁦K+⁩ ATPase في الخلايا الجدارية بشكل لا عكوس (رابطة تساهمية، نحو 18 ساعة لإعادة تصنيع الإنزيم) فتقلل الحمض نحو 90%. الاستعمالات: GERD (الخيار الأول) والتهاب المريء التآكلي، وزولينجر-إليسون، ونزف دوالي المريء، وقرحة NSAIDs (وقاية وعلاج)، ووقاية قرحة الإجهاد، والملوية مع المضادات، ووقاية الالتهاب الرئوي الاستنشاقي.</p>
+      </article>
+      <article class="mus" style="--c:var(--m-ta)">
+        <header><span class="sw"></span><h3>PPIs: pharmacokinetics</h3><span class="layer-l">PHARMA</span></header>
+        <div class="rowx"><b>Chemistry</b><span>Weak bases, destroyed by HCl and ionised in the stomach, so they are enteric-coated: absorbed in the alkaline intestine, then activated in the acid canaliculi of parietal cells</span></div>
+        <div class="rowx"><b>Giving</b><span>Oral or parenteral; 30 to 60 min before breakfast (so the coat is not crushed by motility and HCl). Omeprazole + NaHCO3 (uncoated, rapid): stimulates canaliculi at once, so no wait; the bicarbonate protects the uncoated capsule</span></div>
+        <div class="rowx"><b>Fate</b><span>Bioavailability 60 to 90% (food lowers it by 50%: slide marks "?!"); trapped in acidic compartments; liver metabolism; urine and faeces; short half-life but long duration (starts in 1 h, lasts 24 h)</span></div>
+        <p class="ar" lang="ar">قواعد ضعيفة يدمرها حمض المعدة فتُغلَّف معويًا فتُمتص في الأمعاء القلوية ثم تُنشَّط في قنيات الحمض بالخلايا الجدارية. تُؤخذ قبل الإفطار بـ30 إلى 60 دقيقة حتى لا يتلف الغلاف. أوميبرازول مع بيكربونات الصوديوم (دون غلاف) ينبه القنيات فورًا فلا حاجة للانتظار ويحمي الكبسولة. التوافر الحيوي 60 إلى 90% (والطعام ينقصه بحسب الشريحة، وعليها علامة استفهام). عمر النصف قصير لكن مدة التأثير طويلة (24 ساعة).</p>
+      </article>
+      <article class="mus full" style="--c:var(--m-eo)">
+        <header><span class="sw"></span><h3>PPIs: adverse effects and interactions</h3><span class="layer-l">PHARMA</span></header>
+        <div class="rowx"><b>Drug effect</b><span>Omeprazole and esomeprazole block CYP2C19: less clopidogrel effect (risk in cardiac patients)</span></div>
+        <div class="rowx"><b>Low acid</b><span>Hypochlorhydria: more infections (pneumonia, enteric infection, C. difficile colitis) because HCl no longer kills bacteria; gastric tumours in animals (bacterial colonisation, carcinogenic nitroso compounds); less absorption of calcium carbonate (citrate is the alternative); less vitamin B12 (neuropathy); low magnesium</span></div>
+        <div class="rowx"><b>Others</b><span>More fractures with long use; liver enzymes up; nausea, diarrhoea; headache, dizziness; rash; gynaecomastia and impotence (omeprazole); rebound acid hypersecretion</span></div>
+        <div class="rowx"><b>Interactions</b><span>Omeprazole lowers clearance (CYP450) of diazepam, phenytoin, warfarin, cyclosporine. All PPIs lower absorption of ketoconazole, vitamin B12, magnesium, iron salts and CaCO3</span></div>
+        <p class="ar" lang="ar">أوميبرازول وإيزوميبرازول يثبطان CYP2C19 فيقل تأثير الكلوبيدوجريل (خطر عند مرضى القلب). نقص الحمض يسبب عدوى أكثر (التهاب رئوي وعدوى معوية والتهاب القولون بالمطثية العسيرة) لفقدان الأثر المطهر للحمض، وأورامًا معدية في الحيوانات (استعمار بكتيري ومركبات نيتروزو مسرطنة)، وقلة امتصاص كربونات الكالسيوم (والبديل سترات الكالسيوم) ونقص فيتامين B12 (اعتلال أعصاب) ونقص المغنيسيوم. أيضًا كسور مع الاستعمال الطويل وارتفاع إنزيمات الكبد وإسهال وصداع وطفح وتثدي وعنة (أوميبرازول) وفرط إفراز ارتدادي. التداخلات: أوميبرازول يقلل تصفية الديازيبام والفينيتوين والوارفارين والسيكلوسبورين؛ وكل الـPPI تقلل امتصاص الكيتوكونازول وB12 والمغنيسيوم والحديد وCaCO3.</p>
+      </article>
+      <article class="mus" style="--c:var(--m-ta)">
+        <header><span class="sw"></span><h3>H2 receptor antagonists</h3><span class="layer-l">PHARMA</span></header>
+        <div class="rowx"><b>Members</b><span>Famotidine, cimetidine, ranitidine, nizatidine</span></div>
+        <div class="rowx"><b>Action</b><span>Selective competitive reversible H2 blockade in the stomach (the slide adds "famotidine irreversible??"). They suppress basal, mostly nocturnal, histamine-driven acid more than stimulated acid</span></div>
+        <div class="rowx"><b>Uses</b><span>Peptic ulcer alone (H. pylori negative) or with antibiotics (positive); NSAID ulcer (PPIs better); acute stress ulcer, IV in ICU (PPIs preferred: tolerance); GERD heartburn (onset about 45 min; antacids are faster); resistant urticaria with H1 blockers; hirsutism (cimetidine). Use has fallen since PPIs</span></div>
+        <div class="rowx"><b>PK</b><span>Bioavailability about 50% (first-pass); distribute widely (milk, placenta, brain) so considered safer than PPIs in pregnancy (slide); liver metabolism (less for nizatidine); renal excretion: longer half-life in renal failure, lower the dose</span></div>
+        <p class="ar" lang="ar">فاموتيدين وسيميتيدين ورانيتيدين ونيزاتيدين: حاصرات تنافسية عكوسة لمستقبل H2 في المعدة (والشريحة تضع علامة استفهام على أن الفاموتيدين لا عكوس). تقلل الحمض القاعدي والليلي أكثر من المحرَّض. الاستعمالات: قرحة هضمية وحدها (الملوية سلبية) أو مع المضادات (إيجابية)، وقرحة NSAIDs (الـPPI أفضل)، وقرحة الإجهاد بالوريد في العناية، وحرقة GERD (تبدأ بعد نحو 45 دقيقة والمضادات أسرع)، والشرى المقاوم مع حاصرات H1، والشعرانية (سيميتيدين). التوافر 50% وتنتشر في الحليب والمشيمة والدماغ وتُطرح بالكلى فتُخفَّض الجرعة في الفشل الكلوي.</p>
+      </article>
+      <article class="mus" style="--c:var(--m-eo)">
+        <header><span class="sw"></span><h3>H2 blockers: adverse effects</h3><span class="layer-l">PHARMA</span></header>
+        <div class="rowx"><b>More likely</b><span>In the elderly, high doses and impaired renal function</span></div>
+        <div class="rowx"><b>Cimetidine</b><span>Short acting; anti-androgenic: prolactin up, gynaecomastia, galactorrhoea; blocks CYP450: slower metabolism of warfarin, phenytoin, clopidogrel, diazepam</span></div>
+        <div class="rowx"><b>Body systems</b><span>GIT: diarrhoea, nausea, vomiting. CNS: headache, dizziness, sedation, confusion. CVS: bradycardia and hypotension with a bolus IV dose</span></div>
+        <div class="rowx"><b>Other</b><span>Muscle pain, rash, alopecia, thrombocytopenia, hepatotoxicity; lower absorption of drugs that need HCl (ketoconazole)</span></div>
+        <div class="rowx"><b>Tolerance</b><span>Rebound hyperacidity from H2 receptor up-regulation: take only when needed</span></div>
+        <p class="ar" lang="ar">الأعراض أكثر عند المسنين والجرعات العالية والقصور الكلوي. سيميتيدين: قصير المفعول ومضاد للأندروجين (ارتفاع البرولاكتين: تثدي وثر اللبن) ويثبط CYP450 فيبطئ استقلاب الوارفارين والفينيتوين والكلوبيدوجريل والديازيبام. الجهاز الهضمي: إسهال وغثيان وقيء. العصبي: صداع ودوار وتخدير وارتباك. القلب: بطء وهبوط ضغط مع الحقن الوريدي السريع. وأيضًا ألم عضلي وطفح وتساقط شعر ونقص صفائح وسمية كبدية، وقلة امتصاص أدوية تحتاج الحمض (كيتوكونازول). التحمل وفرط الحموضة الارتدادي بسبب زيادة المستقبلات: تُؤخذ عند الحاجة فقط.</p>
+      </article>
+      <article class="mus" style="--c:var(--h6)">
+        <header><span class="sw"></span><h3>Anticholinergics and antacids</h3><span class="layer-l">PHARMA</span></header>
+        <div class="rowx"><b>Anticholinergics</b><span>Pirenzepine (gastrozepine), dicyclomine: block M1 receptors on enteric ganglia: less HCl, pepsin and gastric emptying. Very rarely used (weak, slow). ADR: dry mouth (commonest), blurred vision, retention, tachycardia</span></div>
+        <div class="rowx"><b>Antacids</b><span>Aluminium and magnesium hydroxides (+ trisilicate); carbonates (calcium most used, magnesium); sodium bicarbonate (not recommended). Weak base + HCl = salt + water: neutralise acid, less pepsin activity</span></div>
+        <div class="rowx"><b>Uses</b><span>Symptom relief (ulcer, GERD, dyspepsia, stress); after meals for best effect; CaCO3 for osteoporosis prophylaxis; in renal failure they lower the phosphate load</span></div>
+        <div class="rowx"><b>ADRs</b><span>Al(OH)3: constipation. Mg(OH)2: diarrhoea. NaHCO3: metabolic alkalosis, phosphate renal stones, sodium load. CaCO3: milk-alkali syndrome. Advanced renal failure: Al (osteoporosis, encephalopathy, myopathy), Mg (CNS depression). Lower absorption of thyroxine, allopurinol, ketoconazole, digoxin, iron, tetracyclines</span></div>
+        <p class="ar" lang="ar">مضادات الكولين (بيرينزيبين وديسيكلومين) تحجب M1 على العقد المعوية فيقل الحمض والبيبسين وإفراغ المعدة، لكنها ضعيفة وبطيئة وقليلة الاستعمال، وأعراضها جفاف الفم (الأشيع) وتشوش الرؤية واحتباس وتسرع. مضادات الحموضة: هيدروكسيد الألمنيوم والمغنيسيوم وكربونات الكالسيوم (الأكثر استعمالًا)، والبيكربونات غير مستحسنة. تعادل الحمض وتقلل نشاط البيبسين وتُعطى بعد الوجبات. الألمنيوم يسبب إمساكًا والمغنيسيوم إسهالًا، والبيكربونات قلاء استقلابيًا وحصى فوسفات، وكربونات الكالسيوم متلازمة الحليب والقلوي. تقلل امتصاص الثيروكسين والأوبيورينول والكيتوكونازول والديجوكسين والحديد والتتراسيكلين.</p>
+      </article>
+      <article class="mus" style="--c:var(--m-io)">
+        <header><span class="sw"></span><h3>Misoprostol, sucralfate, bismuth, rebamipide</h3><span class="layer-l">PHARMA</span></header>
+        <div class="rowx"><b>Misoprostol</b><span>PGE1 analogue: less HCl (cAMP down), more mucus and bicarbonate, better mucosal blood flow. Use: NSAID gastric ulcers. Well absorbed, first-pass metabolism, short t1/2 (3 h). ADR: diarrhoea (commonest), uterine contractions (contraindicated in pregnancy), menorrhagia, postmenopausal bleeding</span></div>
+        <div class="rowx"><b>Sucralfate</b><span>Al(OH)3 + sulphated sucrose: binds positively charged mucosal proteins and forms a barrier over the ulcer. Uses: duodenal ulcer, stress-ulcer prevention, gastritis, burns and bed sores. ADR: constipation, many daily doses, low phosphate; lowers tetracycline and phenytoin absorption. Not given with PPIs, H2 blockers or antacids: it needs acid to activate</span></div>
+        <div class="rowx"><b>Bismuth subsalicylate</b><span>Part of the H. pylori quadruple therapy: antimicrobial, less pepsin, more mucus (PG), coats the ulcer. Toxic: dark teeth and bad taste, black stool (bismuth sulphide), encephalopathy and neurotoxicity, osteodystrophy in renal patients, salicylate hypersensitivity</span></div>
+        <div class="rowx"><b>Rebamipide</b><span>Strengthens mucosal defence and scavenges free radicals; peptic ulcer; ADR: GIT upset, constipation</span></div>
+        <p class="ar" lang="ar">ميزوبروستول نظير PGE1: يقلل الحمض (ينقص cAMP) ويزيد المخاط والبيكربونات وتدفق الدم المخاطي، ويُستعمل لقرحة NSAIDs، وعرضه الأشيع الإسهال، ويسبب انقباض الرحم فيمنع في الحمل. سوكرالفات (هيدروكسيد الألمنيوم + سكروز مكبرت) يرتبط ببروتينات المخاطية ويكوّن حاجزًا فوق القرحة: للقرحة الاثني عشرية ووقاية قرحة الإجهاد، ولا يُعطى مع PPI أو حاصرات H2 أو مضادات الحموضة لأنه يحتاج حمضًا ليتنشط. بزموث سالسيلات من العلاج الرباعي للملوية، وسمّيته: أسنان داكنة وبراز أسود واعتلال دماغي وهشاشة عظام عند مرضى الكلى. ريباميبايد يقوي الدفاع المخاطي ويكنس الجذور الحرة.</p>
+      </article>
+      <article class="mus full" style="--c:var(--m-io)">
+        <header><span class="sw"></span><h3>H. pylori regimens and NSAID precautions</h3><span class="layer-l">PHARMA</span></header>
+        <div class="rowx"><b>Quadruple</b><span>First-line option: bismuth subsalicylate + metronidazole + tetracycline + PPI (about 90%)</span></div>
+        <div class="rowx"><b>Triple</b><span>Preferred if there is no resistance: PPI + amoxicillin + clarithromycin</span></div>
+        <div class="rowx"><b>Why acid matters</b><span>Antibiotics alone are ineffective: the organism hides in mucus, under epithelial folds. When HCl falls the organism comes out, multiplies, and becomes more susceptible</span></div>
+        <div class="rowx"><b>NSAID rules</b><span>Low doses and no NSAID combinations (more toxicity, no added benefit); topical forms when possible; co-prescribe a PPI or misoprostol; avoid corticosteroid combinations except in selected cases; careful in the elderly</span></div>
+        <p class="ar" lang="ar">الرباعي (الخيار الأول): بزموث سالسيلات + ميترونيدازول + تتراسيكلين + PPI بنسبة نجاح نحو 90%. الثلاثي (إن لم توجد مقاومة): PPI + أموكسيسيلين + كلاريثروميسين. المضادات وحدها لا تنفع لأن الجرثومة تختبئ في المخاط وتحت ثنايا الظهارة؛ وعند انخفاض الحمض تخرج وتتكاثر فتصبح أكثر حساسية. قواعد تجنب قرحة NSAIDs: جرعات منخفضة وعدم الجمع بين مضادات الالتهاب واستعمال الموضعي كلما أمكن وإضافة PPI أو ميزوبروستول وتجنب الجمع مع الكورتيزون والحذر عند المسنين.</p>
+      </article>
+    </div>
+    <div class="drawhd">Draw it: step by step</div><div class="draw drawblk" data-svgs="svgB,svgC"><div class="canvas"><svg id="svgB" viewBox="0 0 640 420" role="img" aria-label="Peptic ulcer: theories, complications, treatment"></svg><svg id="svgC" viewBox="0 0 640 420" role="img" aria-label="The parietal cell and the acid drugs" hidden></svg></div><div class="stepper"><div class="dots"></div><div class="sbox"></div><div class="snav"><button class="btn sPrev">Back</button><button class="btn go sNext">Next step</button><button class="btn sPlay">Play all</button></div></div></div>
+
+    <h3 class="sub-h">3. Tumours of the stomach<small>H. pylori links the ulcer, the carcinoma and the lymphoma.</small></h3>
+    <div class="mgrid">
+      <article class="mus full" style="--c:var(--m-eo)">
+        <header><span class="sw"></span><h3>Gastric carcinoma</h3><span class="layer-l">PATHOLOGY</span></header>
+        <div class="rowx"><b>Risk factors</b><span>H. pylori; chronic atrophic gastritis and intestinal metaplasia; dysplasia (intraepithelial neoplasia); adenomas; chronic peptic ulcer; blood group A; alcohol, tobacco, excess processed meat; over 50 years, more in males</span></div>
+        <div class="rowx"><b>Sites</b><span>Pre-pyloric region, pyloric antrum, lesser curvature; less common in cardia or body; rare in the fundus</span></div>
+        <div class="rowx"><b>Gross</b><span>Fungating mass (large irregular mass into the lumen). Malignant ulcer: 2.5 cm, raised everted edge, necrotic floor, indurated base. Infiltrating (linitis plastica): rigid, short stomach with wall thickening and fibrosis; poor prognosis</span></div>
+        <div class="rowx"><b>Microscopic</b><span>Tubular adenocarcinoma (branching tubules of columnar cells). Papillary (well differentiated; finger-like processes on a fibrovascular core). Mucinous (columnar cells in pools of mucin). Signet ring (intracellular mucin pushes the nucleus aside; highly invasive, high grade, poor prognosis). Undifferentiated (sheets of cells, high grade). Rare: adenosquamous and squamous (on squamous metaplasia)</span></div>
+        <div class="rowx"><b>Complications</b><span>Pain, weight loss, nausea, vomiting, bleeding</span></div>
+        <div class="rowx"><b>Spread</b><span>Local; lymphatic; blood to the liver (jaundice, ascites); across the peritoneal cavity to both ovaries: Krukenberg tumour</span></div>
+        <p class="ar" lang="ar">عوامل الخطر: الملوية والتهاب المعدة الضموري والحؤولة المعوية وخلل التنسج والأورام الغدية وقرحة المعدة المزمنة وفصيلة الدم A والكحول والتبغ واللحوم المصنعة، فوق 50 سنة وأكثر في الذكور. المواضع: ما قبل البواب والغار البوابي والانحناء الصغير. عيانيًا: كتلة فطرية، أو قرحة خبيثة (حافة مرتفعة مقلوبة وقاع نخري وقاعدة متصلبة)، أو متسللة (لينيتس بلاستيكا: معدة قاسية قصيرة وسوء إنذار). مجهريًا: أنبوبي وحليمي ومخاطي وخاتمي الحلقة (الأسوأ إنذارًا) وغير متمايز. الانتشار: موضعي ولمفي ودموي للكبد (يرقان واستسقاء) وعبر الصفاق إلى المبيضين (ورم كروكنبرغ).</p>
+      </article>
+      <article class="mus" style="--c:var(--m-ta)">
+        <header><span class="sw"></span><h3>Sarcoma and GIST</h3><span class="layer-l">PATHOLOGY</span></header>
+        <div class="rowx"><b>Group</b><span>GIST, schwannoma, leiomyosarcoma, lymphoma</span></div>
+        <div class="rowx"><b>GIST</b><span>Commonest mesenchymal tumour of the GIT; arises from the interstitial cells of Cajal in the myenteric plexus of the muscularis propria; can arise outside the GIT (omentum, mesentery, retroperitoneum, pleura); three types: spindle, epithelioid, mixed; prognosis depends on size, mitotic rate and site</span></div>
+        <p class="ar" lang="ar">الأورام اللحمية: GIST والشوانوما والساركوما العضلية الملساء واللمفوما. GIST أشيع ورم ميزانشيمي في الجهاز الهضمي وينشأ من خلايا كاخال البينية في الضفيرة المعوية العضلية للطبقة العضلية الخاصة، وقد ينشأ خارج الجهاز الهضمي. ثلاثة أنواع: مغزلي وظهاري ومختلط، ويعتمد الإنذار على الحجم ومعدل الانقسام والموضع.</p>
+      </article>
+      <article class="mus" style="--c:var(--h7)">
+        <header><span class="sw"></span><h3>Gastric lymphoma</h3><span class="layer-l">PATHOLOGY</span></header>
+        <div class="rowx"><b>General</b><span>Extranodal lymphoma (LCA positive)</span></div>
+        <div class="rowx"><b>MALT lymphoma</b><span>Low-grade B-cell lymphoma associated with H. pylori: bacterial stimulation makes lymphocyte aggregates (follicular gastritis); lymphocytes erode glands (lympho-epithelial lesions) and form nodules and sheets</span></div>
+        <div class="rowx"><b>High grade</b><span>High-grade B-cell lymphoma: de novo or from low-grade MALT</span></div>
+        <div class="rowx"><b>Burkitt</b><span>Uncommon; children; EBV; sheets of medium cells with macrophages (starry sky); very high mitosis</span></div>
+        <p class="ar" lang="ar">لمفوما المعدة خارج عقدية. ورم MALT: لمفوما بائية منخفضة الدرجة مرتبطة بالملوية؛ تحفز البكتيريا اللمفاويات فتتجمع (التهاب معدة جريبي) وتأكل الغدد (آفات لمفية ظهارية) وتكوّن عقيدات وصفائح. اللمفوما عالية الدرجة تنشأ من جديد أو من MALT. ورم بوركيت غير شائع في الأطفال ومرتبط بفيروس EBV بمظهر السماء المرصعة بالنجوم وانقسام عالٍ جدًا.</p>
+      </article>
+    </div>
+    <div class="drawhd">Draw it: step by step</div><div class="draw drawblk" data-svgs="svgD"><div class="canvas"><svg id="svgD" viewBox="0 0 640 440" role="img" aria-label="H. pylori: gastritis, ulcer and cancer"></svg></div><div class="stepper"><div class="dots"></div><div class="sbox"></div><div class="snav"><button class="btn sPrev">Back</button><button class="btn go sNext">Next step</button><button class="btn sPlay">Play all</button></div></div></div>
+
+    <h3 class="sub-h">4. Inflammatory bowel disease<small>Learn the two side by side: the table in Connect repeats it.</small></h3>
+    <div class="mgrid">
+      <article class="mus" style="--c:var(--m-io)">
+        <header><span class="sw"></span><h3>Ulcerative colitis</h3><span class="layer-l">PATHOLOGY</span></header>
+        <div class="rowx"><b>Definition</b><span>Ulcero-inflammatory disease limited to the colon; chronic non-specific inflammation of mucosa and submucosa only; bloody stools</span></div>
+        <div class="rowx"><b>Etiology</b><span>Females more than males; peak 20 to 25 years; genetic background; possible microbial invader; psychosomatic; abnormal immune reactivity to an exogenous or endogenous antigen</span></div>
+        <div class="rowx"><b>Gross</b><span>Starts in the rectum, may involve the whole colon (pancolitis). Multiple superficial, large, irregular ulcers with sharp edges, necrotic floor and soft base; mucosa between ulcers is swollen and hyperaemic: pseudopolyps</span></div>
+        <div class="rowx"><b>Microscopic</b><span>Ulcerated mucosa; goblet cell depletion; crypt abscesses; neutrophils and mononuclear cells in the lamina propria; pseudopolyps</span></div>
+        <div class="rowx"><b>Complications</b><span>Haemorrhage, perforation, colorectal carcinoma, fistula, malabsorption, stricture; extra-colonic: hepatic steatosis, biliary cirrhosis, amyloidosis</span></div>
+        <p class="ar" lang="ar">التهاب قولون تقرحي التهابي مزمن غير نوعي محدود بالقولون ويصيب المخاطية وتحت المخاطية فقط ويسبب براز دمويًا. أكثر في الإناث وذروته بين 20 و25 سنة. يبدأ في المستقيم وقد يشمل القولون كله، قرحات متعددة سطحية كبيرة غير منتظمة بحافة حادة وقاع نخري وقاعدة لينة، والمخاطية بينها متورمة محتقنة (زوائد كاذبة). مجهريًا: فقد خلايا كأسية وخراجات سردابية وكريات بيض. المضاعفات: نزف وانثقاب وسرطان قولون ومستقيم وناسور وسوء امتصاص وتضيق.</p>
+      </article>
+      <article class="mus" style="--c:var(--m-eo)">
+        <header><span class="sw"></span><h3>Crohn's disease</h3><span class="layer-l">PATHOLOGY</span></header>
+        <div class="rowx"><b>Definition</b><span>Chronic relapsing inflammatory disorder of any part of the GIT from oesophagus to anus; commonest in the ileum. Etiology similar to UC</span></div>
+        <div class="rowx"><b>Gross</b><span>Hosepipe thickening and cobblestone appearance; linear ulcers (congested margin, sharp edges, fibrotic floor, indurated base); granular serosa with creeping mesenteric fat; enlarged mesenteric nodes; skip lesions (segmental with normal areas between)</span></div>
+        <div class="rowx"><b>Microscopic</b><span>Ulceration; villous blunting and atrophy; transmural inflammation with lymphoid aggregates; non-caseating granuloma; fibrosis, mucosal and neural hypertrophy, vasculitis, dysplasia</span></div>
+        <div class="rowx"><b>Complications</b><span>Stenosis (obstruction), haemorrhage, perforation, malabsorption, fistula, amyloidosis</span></div>
+        <p class="ar" lang="ar">داء كرون اضطراب التهابي مزمن انتكاسي يصيب أي جزء من الجهاز الهضمي من المريء إلى الشرج وأشيع في اللفائفي. عيانيًا: سماكة كخرطوم وشكل حصى الرصيف، وقرحات خطية بحافة محتقنة وقاع ليفي، ودهن مساريقي زاحف وعقد مساريقية متضخمة وآفات متقطعة (skip lesions) تتخللها مناطق سليمة. مجهريًا: التهاب عبر الجدار وتجمعات لمفاوية وورم حبيبي غير متجبن وتليف. المضاعفات: تضيق وانسداد ونزف وانثقاب وسوء امتصاص وناسور ونشوانية.</p>
+      </article>
+    </div>
+
+    <h3 class="sub-h">5. Salivary gland tumours<small>Two tumours, a few lines each.</small></h3>
+    <div class="mgrid">
+      <article class="mus full" style="--c:var(--h6)">
+        <header><span class="sw"></span><h3>Pleomorphic adenoma and Warthin tumour</h3><span class="layer-l">PATHOLOGY</span></header>
+        <div class="rowx"><b>Pleomorphic adenoma</b><span>Benign triphasic tumour: epithelial (ductal) cells, myoepithelial cells, chondromyxoid stroma. Commonest salivary tumour; commonest site the parotid</span></div>
+        <div class="rowx"><b>Warthin tumour</b><span>Papillary cystadenoma lymphomatosum: common in the parotid; double layer of epithelial cells resting on dense lymphoid stroma; second commonest benign salivary tumour</span></div>
+        <p class="ar" lang="ar">الورم الغدي متعدد الأشكال: حميد ثلاثي الطور من خلايا ظهارية (قنوية) وخلايا ظهارية عضلية وسدى غضروفي مخاطاني؛ أشيع أورام الغدد اللعابية وأشيع موضع النكفية. ورم وارثن (الورم الكيسي الغدي الحليمي اللمفاوي): شائع في النكفية، طبقتان من الخلايا الظهارية على سدى لمفاوي كثيف، وهو ثاني أشيع ورم لعابي حميد.</p>
+      </article>
+    </div>
+
+    <h3 class="sub-h">6. Viral and chronic hepatitis<small>Liver pathology: no drug pair in your slides, so learn it as a set.</small></h3>
+    <div class="mgrid">
+      <article class="mus full" style="--c:var(--m-ta)">
+        <header><span class="sw"></span><h3>Acute viral hepatitis</h3><span class="layer-l">PATHOLOGY</span></header>
+        <div class="rowx"><b>Pattern</b><span>Panlobular disease: hepatocytes of variable size, inflammatory and reticuloendothelial cells; hepatocellular injury shows as ballooning degeneration; Kupffer cells prominent</span></div>
+        <div class="cmpwrap"><table class="cmp" style="min-width:640px"><thead><tr><th style="width:90px">Virus</th><th>Type</th><th>Key points</th></tr></thead><tbody>
+          <tr><td><b>HBV</b></td><td class="pa">DNA virus</td><td class="pa">Incubation 2 to 6 months; immune-mediated cell injury, lymphoplasmacytic infiltrate; blood and plasma transfusion, contaminated syringes, mother to child, sexual</td></tr>
+          <tr><td><b>HDV</b></td><td class="sy">Defective RNA virus</td><td class="sy">Needs HBV to replicate; fulminating hepatitis; marked infiltration by mononuclear cells and eosinophilic degeneration of hepatocytes</td></tr>
+          <tr><td><b>HCV</b></td><td class="pa">RNA virus</td><td class="pa">Primary hepatotoxic injury plus immune injury of bile duct epithelium; blood transfusion</td></tr>
+          <tr><td><b>HAV, HEV</b></td><td class="sy">RNA viruses</td><td class="sy">Injury limited to portal and periportal areas; contaminated water and food; mild, usually children; incubation 2 to 6 weeks; no chronic hepatitis; HEV in pregnancy: fulminant hepatitis</td></tr></tbody></table></div>
+        <div class="rowx"><b>Features</b><span>Liver slightly enlarged and bile stained; ballooning (hydropic) degeneration; centrilobular and focal necrosis; shrunken eosinophilic hepatocytes with pyknotic nuclei (acidophilic or Councilman bodies); lymphocytes, macrophages, eosinophils and plasma cells in necrotic areas and portal tracts; cholestasis; Kupffer cell hyperplasia and hypertrophy (engulf debris and bile pigment); reticular framework intact</span></div>
+        <div class="rowx"><b>Clinical</b><span>Fever, nausea, vomiting, abdominal pain, jaundice, enlarged tender liver</span></div>
+        <div class="rowx"><b>Outcome</b><span>Complete recovery in most (especially HAV: the reticulin framework is preserved). Failure: fulminating hepatitis (massive necrosis: death in days = acute massive; weeks = subacute massive) or chronic hepatitis</span></div>
+        <p class="ar" lang="ar">التهاب الكبد الفيروسي الحاد مرض شامل للفصيص: خلايا كبدية متفاوتة الحجم وخلايا التهابية وشبكية بطانية وتنكس بالونيّ وخلايا كوبفر بارزة. HBV فيروس DNA حضانته 2 إلى 6 أشهر وإصابته مناعية وينتقل بالدم والحقن الملوثة والأم للطفل والجنس. HDV فيروس RNA ناقص يحتاج HBV ويسبب التهابًا خاطفًا. HCV فيروس RNA يؤذي الخلايا الكبدية وظهارة القنوات الصفراوية وينتقل بنقل الدم. HAV وHEV فيروسا RNA ينتقلان بالماء والطعام الملوث، حضانتهما 2 إلى 6 أسابيع، خفيفان وللأطفال غالبًا ولا يسببان التهابًا مزمنًا، لكن HEV في الحامل يسبب التهابًا خاطفًا. الملامح: كبد متضخم قليلًا مصبوغ بالصفراء ونخر مركزي وبؤري وأجسام كاونسلمان الحمضية وركود صفراوي، والإطار الشبكي سليم. الشفاء التام في أغلب الحالات (خاصة HAV)، وإلا التهاب خاطف (نخر هائل خلال أيام أو أسابيع) أو مزمن.</p>
+      </article>
+      <article class="mus" style="--c:var(--m-io)">
+        <header><span class="sw"></span><h3>Chronic hepatitis</h3><span class="layer-l">PATHOLOGY</span></header>
+        <div class="rowx"><b>Causes</b><span>Chronic active hepatitis B, C, D; autoimmune; drug-induced; biliary cirrhosis; alpha-1 antitrypsin deficiency; haemochromatosis; Wilson's disease</span></div>
+        <div class="rowx"><b>Grade</b><span>0 none. 1 mild portal, lobular infiltration without necrosis. 2 mild periportal, focal or single-cell necrosis. 3 moderate periportal, moderate to extensive necrosis. 4 severe periportal, bridging necrosis</span></div>
+        <div class="rowx"><b>Stage</b><span>0 none. 1 minimal portal fibrosis. 2 periportal or portal septa. 3 septal fibrosis, distorted architecture, no cirrhosis. 4 cirrhosis</span></div>
+        <div class="rowx"><b>Types</b><span>Persistent: infiltrate restricted to portal tracts. Active: mild: piecemeal necrosis; severe: bridging, confluent or multilobular necrosis. Lobular: patchy lobular and minimal portal inflammation; over 6 months; commoner with HCV</span></div>
+        <p class="ar" lang="ar">الأسباب: التهاب الكبد المزمن الفعال B وC وD والمناعة الذاتية والأدوية والتشمع الصفراوي ونقص ألفا⁦-1⁩ أنتيتريبسين والصباغ الدموي ومرض ويلسون. الدرجة (الالتهاب والنخر) من 0 إلى 4، والمرحلة (التليف) من 0 إلى 4 حيث 4 تعني التشمع. الأنواع: مستمر (الارتشاح في المسافات البابية فقط)، فعال (نخر قطعي، وفي الشديد جسري أو متكاثف أو متعدد الفصيصات)، فصيصي (بقعي ويزيد على 6 أشهر وأشيع مع HCV).</p>
+      </article>
+      <article class="mus" style="--c:var(--m-eo)">
+        <header><span class="sw"></span><h3>Types of liver necrosis</h3><span class="layer-l">PATHOLOGY</span></header>
+        <div class="rowx"><b>Apoptosis</b><span>Death of individual cells</span></div>
+        <div class="rowx"><b>Spotty</b><span>Minute clusters of hepatocytes</span></div>
+        <div class="rowx"><b>Focal</b><span>Larger groups of hepatocytes within a lobule</span></div>
+        <div class="rowx"><b>Zonal</b><span>A particular acinar zone, e.g. centrilobular (zone 3)</span></div>
+        <div class="rowx"><b>Piecemeal</b><span>Interface hepatitis: inflammation from the portal tract into the periportal zone, necrosis of periportal hepatocytes, disrupted limiting plate</span></div>
+        <div class="rowx"><b>Bridging</b><span>Bridging fibrosis across lobules (stage 3)</span></div>
+        <div class="rowx"><b>Confluent</b><span>Multilobular necrosis</span></div>
+        <p class="ar" lang="ar">أنواع النخر: موت الخلايا المفرد (استماتة)، ونخر بقعي (مجموعات صغيرة)، وبؤري (مجموعات أكبر داخل الفصيص)، ومنطقي (منطقة معينة مثل المنطقة المركزية رقم 3)، وقطعي أو التهاب الواجهة (التهاب يمتد من المسافة البابية إلى المنطقة المحيطة بها مع نخر وتمزق الصفيحة الحدية)، وجسري (تليف يمتد عبر الفصيصات، المرحلة 3)، ومتكاثف متعدد الفصيصات.</p>
+      </article>
+      <article class="mus" style="--c:var(--h7)">
+        <header><span class="sw"></span><h3>Hepatitis by cause: C, B, alcoholic, autoimmune</h3><span class="layer-l">PATHOLOGY</span></header>
+        <div class="rowx"><b>HCV</b><span>Lymphoid aggregates in portal tracts; lymphoid and Kupffer cell aggregates in lobules; bile duct degeneration; steatosis; Mallory body-like material</span></div>
+        <div class="rowx"><b>HBV</b><span>As HCV, except no Mallory body-like material</span></div>
+        <div class="rowx"><b>Alcoholic</b><span>Steatosis, ballooning degeneration, hepatitis; Mallory body: deeply eosinophilic cytoplasmic inclusion of misfolded intermediate filaments</span></div>
+        <div class="rowx"><b>Autoimmune</b><span>Plasma-cell-rich portal inflammation, piecemeal necrosis; emperipolesis (lymphocytes apparently engulfed by hepatocytes); hepatocyte rosettes; variable fibrosis</span></div>
+        <p class="ar" lang="ar">HCV: تجمعات لمفاوية في المسافات البابية وفي الفصيصات مع تنكس القنوات الصفراوية وتشحم وجسيمات تشبه جسيمات ماللوري. HBV مثله ما عدا جسيمات ماللوري. الكحولي: تشحم وتنكس بالوني والتهاب وجسيم ماللوري (شوائب حمضية من خيوط وسيطة مطوية خطأ). المناعة الذاتية: التهاب بابي غني بالخلايا البلازمية ونخر قطعي وإيمبيريبوليسيس ووريدات كبدية وتليف متفاوت.</p>
+      </article>
+      <article class="mus full" style="--c:var(--m-ta)">
+        <header><span class="sw"></span><h3>Biliary and metabolic liver diseases</h3><span class="layer-l">PATHOLOGY</span></header>
+        <div class="rowx"><b>Primary biliary cholangitis</b><span>Autoimmune; slow progressive destruction of small bile ducts, so bile builds up in the liver (cholestasis)</span></div>
+        <div class="rowx"><b>Secondary biliary cirrhosis</b><span>Long-term partial or total obstruction of large extra-hepatic bile ducts; bile builds up and damages liver tissue</span></div>
+        <div class="rowx"><b>Wilson disease</b><span>Rare genetic disorder; excess copper in liver, brain and cornea (Kayser-Fleischer ring); liver disease, CNS dysfunction, death if untreated</span></div>
+        <div class="rowx"><b>Haemochromatosis</b><span>Iron overload (absorbs too much iron): liver, pancreas, skin: bronze diabetes (hyperglycaemia and dark skin)</span></div>
+        <div class="rowx"><b>Alpha-1 antitrypsin deficiency</b><span>Hereditary; lung (emphysema: alpha-1 is a protease inhibitor) and liver (hepatitis, cirrhosis, HCC)</span></div>
+        <p class="ar" lang="ar">التشمع الصفراوي الأولي: مرض مناعي ذاتي يدمر القنوات الصفراوية الصغيرة ببطء فيتراكم الصفراء (ركود صفراوي). التشمع الصفراوي الثانوي: انسداد جزئي أو كلي طويل للقنوات الكبيرة خارج الكبد. ويلسون: نحاس زائد في الكبد والدماغ والقرنية (حلقة كايزر-فلايشر). الصباغ الدموي: فرط حديد في الكبد والبنكرياس والجلد (السكري البرونزي). نقص ألفا⁦-1⁩ أنتيتريبسين وراثي يصيب الرئة (نفاخ) والكبد (التهاب وتشمع وسرطان).</p>
+      </article>
+    </div>
+
+    <h3 class="sub-h">7. Cirrhosis and liver cancer<small>The end of the liver chain, and the source of oesophageal varices.</small></h3>
+    <div class="mgrid">
+      <article class="mus" style="--c:var(--m-eo)">
+        <header><span class="sw"></span><h3>Liver cirrhosis: definition and picture</h3><span class="layer-l">PATHOLOGY</span></header>
+        <div class="rowx"><b>Definition</b><span>Chronic diffuse disease: (1) liver cell degeneration and necrosis; (2) regeneration nodules that lack the lobular pattern; (3) diffuse fibrosis</span></div>
+        <div class="rowx"><b>Mechanism</b><span>Fibrosis: collagen I and III from hepatic stellate (Ito) cells and portal fibroblasts, stimulated by inflammatory cytokines. Regeneration: hepatocyte proliferation from progenitor cells</span></div>
+        <div class="rowx"><b>Classify</b><span>METAVIR: F0 none, F1 portal, F2 periportal, F3 bridging, F4 cirrhosis. Nodule size: micronodular 1 to 3 mm, macronodular over 3 mm, mixed. Cause: post-hepatitic, post-necrotic, biliary, cardiac, cryptogenic, Laennec's (alcoholic), syphilitic, alpha-1 antitrypsin, haemochromatosis, Wilson's</span></div>
+        <div class="rowx"><b>Gross</b><span>Small, firm liver; diffusely nodular surface; thick capsule; cut surface: rounded regenerating nodules of variable size separated by grey-white fibrous septa</span></div>
+        <div class="rowx"><b>Microscopic</b><span>Loss of lobular pattern; nodules with absent or eccentric central vein; hyperplastic, degenerated or necrotic liver cells; septa with lymphocytes, proliferated bile ducts and capillaries</span></div>
+        <p class="ar" lang="ar">التشمع مرض كبدي مزمن منتشر: (1) تنكس ونخر الخلايا الكبدية، (2) عقيدات تجدد تفقد النمط الفصيصي، (3) تليف منتشر. التليف: كولاجين I وIII من الخلايا النجمية (إيتو) وخلايا الأرومة الليفية البابية بتحفيز السيتوكينات، والتجدد من الخلايا السلفية. التصنيف: ميتافير F0 إلى F4، والحجم (صغير العقيدات 1 إلى 3 مم، كبير العقيدات أكثر من 3 مم، مختلط)، والسبب. عيانيًا: كبد صغير قاسٍ سطحه عقيدي وكبسولته سميكة وعقيدات تجدد تفصلها حواجز ليفية رمادية بيضاء. مجهريًا: فقد النمط الفصيصي ووريد مركزي غائب أو لا مركزي.</p>
+      </article>
+      <article class="mus" style="--c:var(--m-io)">
+        <header><span class="sw"></span><h3>Effects of cirrhosis</h3><span class="layer-l">PATHOLOGY</span></header>
+        <div class="rowx"><b>Portal hypertension</b><span>Nodules press on hepatic veins; hepatic artery to portal vein anastomoses. Venous congestion of the GIT, splenomegaly, ascites; varices: oesophageal (lower end), piles, caput medusae</span></div>
+        <div class="rowx"><b>Ascites</b><span>Portal hypertension, hypoproteinaemia, sodium and water retention (hyperaldosteronism)</span></div>
+        <div class="rowx"><b>Hypersplenism</b><span>Anaemia, leucopenia, thrombocytopenia</span></div>
+        <div class="rowx"><b>Poor function</b><span>Hypoproteinaemia; less estrogen inactivation: gynaecomastia, testicular atrophy, less pubic and axillary hair; palmar erythema; arterial spiders; less vitamin A formation</span></div>
+        <div class="rowx"><b>Malignancy</b><span>Hepatocellular carcinoma, especially in macronodular cirrhosis</span></div>
+        <p class="ar" lang="ar">فرط الضغط البابي: تضغط العقيدات على الأوردة الكبدية وتتكون مفاغرات بين الشريان الكبدي والوريد البابي، فيحدث احتقان وريدي في الجهاز الهضمي وتضخم طحال واستسقاء ودوالٍ (دوالي المريء السفلية والبواسير ورأس الأفعى). الاستسقاء: فرط ضغط بابي ونقص بروتين الدم واحتباس صوديوم وماء (فرط الألدوستيرون). فرط نشاط الطحال: فقر دم ونقص كريات بيض وصفائح. ضعف الوظيفة: نقص البروتين وقلة تعطيل الإستروجين (تثدي وضمور خصية وقلة الشعر) واحمرار الراحتين وعناكب وعائية. وخطر سرطان الخلايا الكبدية خاصة في كبير العقيدات.</p>
+      </article>
+      <article class="mus full" style="--c:var(--h6)">
+        <header><span class="sw"></span><h3>Hepatocellular carcinoma (HCC)</h3><span class="layer-l">PATHOLOGY</span></header>
+        <div class="rowx"><b>Who</b><span>Males over 50; cirrhosis (especially macronodular: haemochromatosis, biliary cirrhosis, alpha-1 antitrypsin); liver cell dysplasia; atypical adenomatous hyperplasia; hepatitis B and C; aflatoxin of Aspergillus flavus; bilharziasis; alcohol, tobacco, obesity; anabolic steroids; thorotrast; tyrosinaemia; ataxia telangiectasia</span></div>
+        <div class="rowx"><b>Clinical</b><span>Abdominal mass, ascites, jaundice; hypoglycaemia, hypercholesterolaemia, hypercalcaemia; erythrocytosis, carcinoid syndrome; raised hCG and AFP</span></div>
+        <div class="rowx"><b>Why (paraneoplastic)</b><span>Hypoglycaemia: poor gluconeogenesis and tumour IGF-II. Hypercalcaemia: PTH-related protein. Hypercholesterolaemia: abnormal LDL receptor, less LDL clearance. Erythrocytosis: erythropoietin. AFP: produced by regenerating hepatocytes (normally a yolk sac and fetal liver protein)</span></div>
+        <div class="rowx"><b>Gross, spread</b><span>Single mass or multiple nodules; early blood spread through sinusoids</span></div>
+        <div class="rowx"><b>Microscopic types</b><span>Classic: trabecular, solid sheets or pseudoglandular with sinusoids and scanty stroma. Sclerosing: dense fibrous stroma. Sarcomatoid: spindle cells. Fibrolamellar: polygonal oncocytic cells with fibrous stroma; young patients without cirrhosis; good prognosis</span></div>
+        <div class="rowx"><b>Markers</b><span>AFP, keratin, EMA positive</span></div>
+        <div class="rowx"><b>Prognosis</b><span>Better: small, capsulated, single, fibrolamellar, few mitoses. Worse: portal vein invasion, high AFP, arising in cirrhosis, multiple masses</span></div>
+        <p class="ar" lang="ar">يصيب الذكور فوق 50 سنة، ويرتبط بالتشمع (خاصة كبير العقيدات) وخلل تنسج الخلايا الكبدية والتهاب الكبد B وC والأفلاتوكسين من الرشاشية الصفراء والبلهارسيا والكحول والتبغ والسمنة والستيرويدات البنائية. سريريًا: كتلة بطنية واستسقاء ويرقان، وأعراض الأورام المرافقة: نقص سكر الدم (ضعف تكوين الجلوكوز وIGF-II من الورم) وفرط كالسيوم (PTHrP) وفرط كوليسترول (مستقبل LDL شاذ) وفرط كريات حمراء (إريثروبويتين)، مع ارتفاع AFP وhCG. ينتشر مبكرًا بالدم عبر الجيبانيات. الأنواع: كلاسيكي وتصلبي ومغزلي وصفائحي ليفي (شباب بلا تشمع وإنذار جيد). الإنذار أفضل مع الورم الصغير المحفظ المفرد وأسوأ مع غزو الوريد البابي وارتفاع AFP والتشمع والكتل المتعددة.</p>
+      </article>
+    </div>
+
+    <div class="drawhd">Draw it: step by step</div><div class="draw drawblk" data-svgs="svgE"><div class="canvas"><svg id="svgE" viewBox="0 0 640 420" role="img" aria-label="From liver injury to cirrhosis and liver cancer"></svg></div><div class="stepper"><div class="dots"></div><div class="sbox"></div><div class="snav"><button class="btn sPrev">Back</button><button class="btn go sNext">Next step</button><button class="btn sPlay">Play all</button></div></div></div>
+    <div class="hooks hooks4">
+      <div class="hook"><b>Night acid: H2 blocker*</b><span>Hyperacidity theory at night pairs with H2 blockers (no nocturnal breakthrough). PPIs pair with GERD and H. pylori.</span><p class="ar" lang="ar">الحمض الليلي = حاصرات H2.</p></div>
+      <div class="hook"><b>NSAID ulcer: PPI or misoprostol</b><span>Low dose, topical, add PPI or misoprostol. Misoprostol is out in pregnancy.</span><p class="ar" lang="ar">قرحة NSAIDs: PPI أو ميزوبروستول.</p></div>
+      <div class="hook"><b>Low acid costs*</b><span>PPIs: infections incl. C. difficile, low B12 and Mg, nitroso compounds. Atrophic gastritis: carcinoma.</span><p class="ar" lang="ar">نقص الحمض: عدوى ونقص B12.</p></div>
+      <div class="hook"><b>Skip lesions: Crohn*</b><span>UC starts in the rectum and is continuous; Crohn skips, is transmural, with granulomas.</span><p class="ar" lang="ar">كرون: آفات متقطعة وحبيبومات.</p></div>
+    </div>
+
+    <details class="key"><summary>Notes on the slides: check with your lecturer</summary>
+      <p class="note-s">* The pharmacology slides mark some points with "?!": famotidine "irreversible", PPI bioavailability and food ("food lowers it by 50%"), and "short half-life but long duration". I kept them as written. The D2 blocker ADR "planted emotion" is the slide's wording; I read it as an emotional change. The slide lists bethanechol ADR "UB, retention"; I read it as a bladder effect. Gastrin as a stimulus on the parietal cell, and PPIs for Barrett's, are my additions (marked *). The spelling of "Councilman bodies" and GIST is corrected from the slides. Pathology and pharmacology slides do not cover IBD, salivary or liver drugs, so those parts have no drug pair. Page 9 (bacteriology) covers H. pylori tests, C. difficile and aflatoxin.</p>
+    </details>
+
+    <div class="rtab blind" style="margin-top:20px">
+      <div class="rtab-h"><h3>Recall sheet: tap a blurred cell to reveal</h3><button class="btn rtBtn">Show all answers</button></div>
+      <div class="tw"><table style="min-width:520px"><thead><tr><th>Ask yourself</th><th>Answer</th></tr></thead><tbody>
+        <tr><td class="m">GERD pathology to Barrett's: the sequence</td><td class="rv">Columnar (intestinal) metaplasia above the Z-line, dysplasia, carcinoma in situ, adenocarcinoma</td></tr>
+        <tr><td class="m">H2 blockers versus PPIs: one advantage each</td><td class="rv">H2: rapid, no nocturnal breakthrough. PPI: more potent, once daily, anti-Helicobacter</td></tr>
+        <tr><td class="m">Prokinetics: four classes</td><td class="rv">5HT4 agonists, D2 blockers (metoclopramide, domperidone), bethanechol, erythromycin</td></tr>
+        <tr><td class="m">Three theories of peptic ulcer and the drug for each</td><td class="rv">Hyperacidity: H2 blocker or PPI. Infective: antibiotics + PPI. Neurogenic: anticholinergic</td></tr>
+        <tr><td class="m">Peptic ulcer: complications</td><td class="rv">Haemorrhage, perforation, scar contraction (pyloric stenosis, hour-glass), penetration, malignancy under 1%</td></tr>
+        <tr><td class="m">PPI: mechanism and duration</td><td class="rv">Prodrug, covalent irreversible block of H+/K+ ATPase; about 18 h to resynthesise; about 90% less acid</td></tr>
+        <tr><td class="m">PPI adverse effects linked to low acid</td><td class="rv">Infection (C. difficile), low B12, low Mg, less CaCO3 absorption, fractures</td></tr>
+        <tr><td class="m">Sucralfate: rule</td><td class="rv">Needs acid: do not give with PPI, H2 blocker or antacid</td></tr>
+        <tr><td class="m">H. pylori regimens</td><td class="rv">Quadruple: bismuth + metronidazole + tetracycline + PPI (90%). Triple: PPI + amoxicillin + clarithromycin</td></tr>
+        <tr><td class="m">Gastric carcinoma: sites, worst type, spread to ovaries</td><td class="rv">Pylorus, antrum, lesser curve; signet ring; Krukenberg</td></tr>
+        <tr><td class="m">UC versus Crohn: site and hallmark</td><td class="rv">UC: rectum up, continuous, crypt abscesses. Crohn: ileum, skip lesions, granulomas</td></tr>
+        <tr><td class="m">Cirrhosis: three defining features</td><td class="rv">Cell necrosis, regeneration nodules, diffuse fibrosis</td></tr>
+        <tr><td class="m">HCC: AFP and paraneoplastic effects</td><td class="rv">AFP up; hypoglycaemia, hypercalcaemia, erythrocytosis, hypercholesterolaemia</td></tr>
+      </tbody></table></div>
+    </div>
+
+  </section>
+
+  <section class="sec" id="s-cmp">
+    <div class="sec-h"><h2>Connect the two subjects</h2><p>Drug against drug, drug against disease, disease against disease. Items marked * are memory tricks or my own summary.</p></div>
+    <div class="mgrid">
+      <article class="mus full" style="--c:var(--m-io)">
+        <header><span class="sw"></span><h3>1. Acid-lowering drugs side by side</h3></header>
+        <div class="cmpwrap"><table class="cmp" style="min-width:680px"><thead><tr><th style="width:120px">Class</th><th>Target</th><th>Strength</th><th>Best use</th><th>Key ADR</th></tr></thead><tbody>
+          <tr><td><b>PPIs</b></td><td class="pa">H+/K+ ATPase, irreversible</td><td class="pa">About 90% less acid; once daily</td><td class="pa">GERD (first choice), ulcer, ZES, NSAID ulcer, H. pylori</td><td class="pa">Low acid: infection, B12, Mg; CYP2C19 (clopidogrel)</td></tr>
+          <tr><td><b>H2 blockers</b></td><td class="sy">H2 receptor, competitive</td><td class="sy">Weaker; tolerance</td><td class="sy">Rapid relief, night acid, IV in ICU</td><td class="sy">Cimetidine: anti-androgen, CYP450</td></tr>
+          <tr><td><b>PCAB</b></td><td class="pa">H+/K+ ATPase, K+-competitive, reversible</td><td class="pa">More potent than PPI</td><td class="pa">Taken before a meal; against H. pylori</td><td class="pa">No enzyme inhibition</td></tr>
+          <tr><td><b>Anticholinergics</b></td><td class="sy">M1 receptors</td><td class="sy">Weak, slow</td><td class="sy">Very rarely</td><td class="sy">Dry mouth, retention, tachycardia</td></tr>
+          <tr><td><b>Antacids</b></td><td class="pa">Neutralise HCl in the lumen</td><td class="pa">Immediate, short</td><td class="pa">Symptom relief after meals</td><td class="pa">Al: constipation; Mg: diarrhoea</td></tr></tbody></table></div>
+        <p class="ar" lang="ar">PPI هي الأقوى (تثبط المضخة بلا رجعة، جرعة يوميًا) والخيار الأول في GERD. حاصرات H2 أسرع وللحمض الليلي لكن تحدث لها مقاومة. PCAB أقوى من PPI وتؤخذ قبل الوجبة. مضادات الكولين ضعيفة وقليلة الاستعمال. مضادات الحموضة تعادل الحمض فورًا للتسكين.</p>
+      </article>
+
+      <article class="mus full" style="--c:var(--m-ta)">
+        <header><span class="sw"></span><h3>2. Protect the mucosa: four drugs</h3></header>
+        <div class="cmpwrap"><table class="cmp" style="min-width:620px"><thead><tr><th style="width:120px">Drug</th><th>How</th><th>Use</th><th>Watch</th></tr></thead><tbody>
+          <tr><td><b>Misoprostol</b></td><td class="pa">PGE1 analogue: less HCl (cAMP down), more mucus and bicarbonate, more blood flow</td><td class="pa">NSAID gastric ulcer</td><td class="pa">Diarrhoea; uterine contraction: not in pregnancy</td></tr>
+          <tr><td><b>Sucralfate</b></td><td class="sy">Binds positively charged proteins, barrier over the ulcer</td><td class="sy">Duodenal ulcer, stress-ulcer prevention</td><td class="sy">Needs acid: not with PPI, H2 blocker or antacid; constipation</td></tr>
+          <tr><td><b>Bismuth subsalicylate</b></td><td class="pa">Antimicrobial, less pepsin, more mucus, coats ulcer</td><td class="pa">Quadruple H. pylori therapy</td><td class="pa">Black stool, dark teeth, encephalopathy, salicylate allergy</td></tr>
+          <tr><td><b>Rebamipide</b></td><td class="sy">Strengthens defence, scavenges free radicals</td><td class="sy">Peptic ulcer</td><td class="sy">GIT upset, constipation</td></tr></tbody></table></div>
+        <p class="ar" lang="ar">ميزوبروستول للقرحة الناتجة عن NSAIDs (ممنوع في الحمل). سوكرالفات حاجز فوق القرحة ويحتاج الحمض فلا يُعطى مع مثبطات الحمض. بزموث جزء من العلاج الرباعي للملوية (براز أسود). ريباميبايد يقوي الدفاع المخاطي.</p>
+      </article>
+
+      <article class="mus full" style="--c:var(--m-eo)">
+        <header><span class="sw"></span><h3>3. Adverse effects and why they happen</h3></header>
+        <div class="cmpwrap"><table class="cmp" style="min-width:600px"><thead><tr><th style="width:190px">Drug</th><th>Effect</th><th>Because</th></tr></thead><tbody>
+          <tr><td><b>PPIs</b></td><td class="pa">Infections: pneumonia, enteric, C. difficile</td><td class="pa">Less HCl, which normally kills bacteria</td></tr>
+          <tr><td><b>PPIs</b></td><td class="sy">Low B12, low Mg; less CaCO3 absorption</td><td class="sy">Low acid hinders absorption*</td></tr>
+          <tr><td><b>Omeprazole, esomeprazole</b></td><td class="pa">Less clopidogrel effect</td><td class="pa">Block CYP2C19</td></tr>
+          <tr><td><b>Cimetidine</b></td><td class="sy">Gynaecomastia, galactorrhoea; raised levels of warfarin, phenytoin, diazepam</td><td class="sy">Anti-androgen, prolactin up; blocks CYP450</td></tr>
+          <tr><td><b>H2 blockers and PPIs</b></td><td class="pa">Less ketoconazole absorbed</td><td class="pa">The drug needs HCl to dissolve</td></tr>
+          <tr><td><b>Metoclopramide, domperidone</b></td><td class="sy">Parkinsonism, prolactin up, emotional change</td><td class="sy">D2 blockade in basal ganglia, pituitary, limbic system</td></tr>
+          <tr><td><b>Cisapride and 5HT4 agonists</b></td><td class="pa">QT prolongation, arrhythmia (obsolete)</td><td class="pa">5HT4 receptors in the heart</td></tr>
+          <tr><td><b>Al hydroxide / Mg hydroxide</b></td><td class="sy">Constipation / diarrhoea</td><td class="sy">Opposite effects on gut motility</td></tr>
+          <tr><td><b>NaHCO3</b></td><td class="pa">Metabolic alkalosis, sodium load</td><td class="pa">Systemic absorption</td></tr></tbody></table></div>
+        <p class="ar" lang="ar">اربط كل عرض جانبي بسببه: PPI تقلل الحمض فتزيد العدوى وتنقص B12 والمغنيسيوم؛ أوميبرازول يثبط CYP2C19؛ سيميتيدين مضاد للأندروجين ويثبط CYP450؛ ميتوكلوبراميد يحجب D2 فتظهر باركنسونية وارتفاع البرولاكتين؛ سيزابريد يطيل QT؛ الألمنيوم إمساك والمغنيسيوم إسهال.</p>
+      </article>
+
+      <article class="mus full" style="--c:var(--h7)">
+        <header><span class="sw"></span><h3>4. Peptic ulcer versus malignant ulcer, and the long road to cancer</h3></header>
+        <div class="cmpwrap"><table class="cmp" style="min-width:560px"><thead><tr><th style="width:150px"></th><th>Peptic ulcer</th><th>Malignant ulcer</th></tr></thead><tbody>
+          <tr><td><b>Size</b></td><td class="pa">0.5 to 3 cm</td><td class="pa">About 2.5 cm</td></tr>
+          <tr><td><b>Edge</b></td><td class="sy">Clear, punched out</td><td class="sy">Raised, everted</td></tr>
+          <tr><td><b>Floor, base</b></td><td class="pa">Fibrous base; muscle destroyed</td><td class="pa">Necrotic floor; indurated base</td></tr>
+          <tr><td><b>Mucosa around</b></td><td class="sy">Flat or atrophic</td><td class="sy">Infiltrated</td></tr>
+          <tr><td><b>Clue</b></td><td class="pa">Endarteritis obliterans at the base</td><td class="pa">Sites: pre-pylorus, antrum, lesser curvature</td></tr></tbody></table></div>
+        <p class="note-s">The slide gives malignant change of a peptic ulcer as under 1%, in untreated ulcers over 3 cm. The "clear, punched out" and "infiltrated" cells are my reading*.</p>
+        <p class="ar" lang="ar">القرحة الهضمية: 0.5 إلى 3 سم بحافة واضحة وقاعدة ليفية، أما القرحة الخبيثة فحجمها نحو 2.5 سم بحافة مرتفعة مقلوبة وقاع نخري وقاعدة متصلبة. التحول الخبيث للقرحة الهضمية أقل من 1% في القرح غير المعالجة الأكبر من 3 سم.</p>
+      </article>
+
+      <article class="mus full" style="--c:var(--m-io)">
+        <header><span class="sw"></span><h3>5. Ulcerative colitis versus Crohn's disease</h3></header>
+        <div class="cmpwrap"><table class="cmp" style="min-width:560px"><thead><tr><th style="width:150px"></th><th>Ulcerative colitis</th><th>Crohn's disease</th></tr></thead><tbody>
+          <tr><td><b>Site</b></td><td class="pa">Colon only; starts in the rectum</td><td class="pa">Any part, mouth to anus; commonest ileum</td></tr>
+          <tr><td><b>Pattern</b></td><td class="sy">Continuous (pancolitis)</td><td class="sy">Segmental: skip lesions</td></tr>
+          <tr><td><b>Depth</b></td><td class="pa">Mucosa and submucosa only</td><td class="pa">Transmural</td></tr>
+          <tr><td><b>Gross</b></td><td class="sy">Superficial irregular ulcers, pseudopolyps</td><td class="sy">Hosepipe wall, cobblestone, linear ulcers, creeping fat</td></tr>
+          <tr><td><b>Micro</b></td><td class="pa">Goblet cell loss, crypt abscesses</td><td class="pa">Non-caseating granuloma, lymphoid aggregates</td></tr>
+          <tr><td><b>Stool, hallmark</b></td><td class="sy">Bloody stool</td><td class="sy">Stenosis, fistula, malabsorption</td></tr>
+          <tr><td><b>Special</b></td><td class="pa">Colorectal carcinoma; females; peak 20 to 25</td><td class="pa">Amyloidosis; fibrosis</td></tr></tbody></table></div>
+        <p class="ar" lang="ar">UC: القولون فقط ويبدأ من المستقيم بشكل متصل ويصيب المخاطية وتحت المخاطية، براز دموي، خراجات سردابية وزوائد كاذبة وخطر سرطان القولون. Crohn: أي جزء (أشيع اللفائفي) بآفات متقطعة وعبر جدار الأمعاء كله، ورم حبيبي غير متجبن، سماكة كخرطوم وحصى الرصيف، تضيق وناسور وسوء امتصاص.</p>
+      </article>
+
+      <article class="mus full" style="--c:var(--m-ta)">
+        <header><span class="sw"></span><h3>6. Gastric carcinoma types, and hepatitis A to E</h3></header>
+        <div class="cmpwrap"><table class="cmp" style="min-width:620px"><thead><tr><th style="width:150px">Gastric type</th><th>Look</th><th>Note</th></tr></thead><tbody>
+          <tr><td><b>Tubular</b></td><td class="pa">Branching tubules, columnar cells</td><td class="pa">Commonest pattern*</td></tr>
+          <tr><td><b>Papillary</b></td><td class="sy">Finger-like processes on a fibrovascular core, cuboidal cells</td><td class="sy">Well differentiated</td></tr>
+          <tr><td><b>Mucinous</b></td><td class="pa">Columnar cells in pools of mucin</td><td class="pa"></td></tr>
+          <tr><td><b>Signet ring</b></td><td class="sy">Intracellular mucin pushes the nucleus aside</td><td class="sy">Highly invasive, poor prognosis</td></tr>
+          <tr><td><b>Undifferentiated</b></td><td class="pa">Sheets of cells</td><td class="pa">High grade</td></tr></tbody></table></div>
+        <div class="cmpwrap" style="margin-top:12px"><table class="cmp" style="min-width:620px"><thead><tr><th style="width:90px">Hepatitis</th><th>Virus</th><th>Spread</th><th>Special</th></tr></thead><tbody>
+          <tr><td><b>A</b></td><td class="pa">RNA</td><td class="pa">Water, food</td><td class="pa">Mild, no chronic; recovery, reticulin kept</td></tr>
+          <tr><td><b>B</b></td><td class="sy">DNA</td><td class="sy">Blood, syringes, mother to child, sexual</td><td class="sy">Incubation 2 to 6 months</td></tr>
+          <tr><td><b>C</b></td><td class="pa">RNA</td><td class="pa">Blood transfusion</td><td class="pa">Chronic lobular; steatosis</td></tr>
+          <tr><td><b>D</b></td><td class="sy">Defective RNA</td><td class="sy">With HBV</td><td class="sy">Fulminating</td></tr>
+          <tr><td><b>E</b></td><td class="pa">RNA</td><td class="pa">Water, food</td><td class="pa">Fulminant in pregnancy</td></tr></tbody></table></div>
+        <p class="ar" lang="ar">أنواع سرطان المعدة الغدي: أنبوبي (أنابيب متفرعة) وحليمي (زوائد إصبعية على محور وعائي ليفي) ومخاطي (برك مخاط) وخاتمي الحلقة (مخاط داخل الخلية يزيح النواة وإنذاره سيئ) وغير متمايز. الالتهابات الفيروسية: A وE بالماء والطعام (E خاطف في الحامل)، B (DNA) بالدم والجنس والأم، C بنقل الدم، D يحتاج B ويسبب التهابًا خاطفًا.</p>
+      </article>
+
+      <article class="mus full" style="--c:var(--m-eo)">
+        <header><span class="sw"></span><h3>7. Words that appear in both subjects</h3></header>
+        <div class="cmpwrap"><table class="cmp" style="min-width:560px"><thead><tr><th style="width:190px">Word</th><th>In pathology</th><th>In pharmacology</th></tr></thead><tbody>
+          <tr><td><b>H. pylori</b></td><td class="pa">Gastritis, ulcer, atrophic gastritis, carcinoma, MALT</td><td class="pa">Eradication: triple or quadruple; PPIs and vonoprazan help</td></tr>
+          <tr><td><b>NSAIDs, steroids</b></td><td class="sy">Predisposing drugs; ulcerogenic</td><td class="sy">Precautions; misoprostol or PPI cover; avoid steroid combinations</td></tr>
+          <tr><td><b>Smoking, alcohol, spices</b></td><td class="pa">Predisposing factors</td><td class="pa">Raise ulcer risk (smoking: HCl up, bicarbonate down); lifestyle changes in GERD</td></tr>
+          <tr><td><b>Mucosal defence</b></td><td class="sy">Mucin layer lost; endarteritis at the base</td><td class="sy">Mucus, bicarbonate, blood flow, PGs, NO: raised by cytoprotectives</td></tr>
+          <tr><td><b>Zollinger-Ellison</b></td><td class="pa">Gastrin-producing pancreatic tumour</td><td class="pa">PPIs listed</td></tr>
+          <tr><td><b>Oesophageal varices</b></td><td class="sy">Cirrhosis, portal hypertension</td><td class="sy">PPIs listed in bleeding varices</td></tr>
+          <tr><td><b>Hypochlorhydria</b></td><td class="pa">Atrophic gastritis, intestinal metaplasia, carcinoma</td><td class="pa">PPI effect: bacteria, nitroso compounds, infections, low B12</td></tr>
+          <tr><td><b>GERD, oesophagitis</b></td><td class="sy">Barrett's, stricture, adenocarcinoma</td><td class="sy">PPI first choice; prokinetics; fundoplication</td></tr></tbody></table></div>
+        <p class="ar" lang="ar">هذه الكلمات تتكرر في المادتين: الملوية (باثولوجي: التهاب وقرحة وسرطان وMALT، فارماكولوجي: العلاج الثلاثي والرباعي)، مضادات الالتهاب والستيرويد (مسببة للقرحة، وقواعد الوقاية)، التدخين والكحول، الدفاع المخاطي، زولينجر-إليسون (PPI)، دوالي المريء (PPI)، ونقص حمض المعدة (ضمور وسرطان مقابل تأثير PPI).</p>
+      </article>
+    </div>
+
+  </section>
+
+  <section class="sec" id="s-cards">
+    <div class="sec-h"><h2>Question cards</h2><p>Read the question, answer aloud, then tap the card. Rate yourself honestly; "Review" cards come back first.</p></div>
+    <div class="deck-top"><div class="chips" id="dchips"></div><div class="score" id="score"></div></div>
+    <div class="pbar"><i id="dbar" style="width:0%"></i></div>
+    <div class="flip" id="flip"><div class="inner" id="inner"></div></div>
+    <div class="rate"><button class="btn rev" id="rRev" disabled>Review again</button><button class="btn got" id="rGot" disabled>Got it</button></div>
+    <div class="dnav"><button class="btn" id="dPrev">Previous</button><button class="btn" id="dShuf">Shuffle</button><button class="btn" id="dRev">Only review cards</button><button class="btn" id="dNext">Next</button></div>
+  </section>
+
+  <p class="foot">Source: DHB.pdf (pathology), GERD.pdf and Peptic_ulcer_.pdf (pharmacology). Items marked * are added or uncertain. Arabic text explains the English content, which stays in English as your exam will be.</p>
+</div>
+<script>
+/* ===== svg kit ===== */
+const $=s=>document.querySelector(s),pad=n=>String(n).padStart(2,'0');
+/* label block with optional leader line. o: {a:'start'|'end'|'middle', col:'--h1', lx, ly} */
+function lb(x,y,head,subs,tx,ty,o){
+  o=o||{};subs=[].concat(subs||[]);const a=o.a||'start';
+  const lines=head?[head].concat(subs):subs;
+  let g='';
+  if(tx!=null){
+    const lx=o.lx!=null?o.lx:(a==='end'?x+4:(a==='start'?x-4:x));
+    const ly=o.ly!=null?o.ly:(a==='middle'?y+15*(lines.length-1)+7:y-4);
+    g+=`<line x1="${lx}" y1="${ly}" x2="${tx}" y2="${ty}"/><circle cx="${tx}" cy="${ty}" r="2.6"/>`;
+  }
+  lines.forEach((s,i)=>{
+    const isHead=head&&i===0;
+    g+=`<text${isHead?'':' class="sub"'} x="${x}" y="${y+15*i}" text-anchor="${a}"${isHead&&o.col?` style="fill:var(${o.col})"`:''}>${s}</text>`;
+  });
+  return `<g class="lab">${g}</g>`;
+}
+/* animated stroke path (arrow or plain) */
+const pth=(d,col,extra)=>`<path class="dr arrowp" pathLength="1" style="stroke:var(${col})" d="${d}" ${extra||''}/>`;
+/* sketch outline that draws itself */
+const sk=(d,cls,style)=>`<path class="sk dr ${cls||''}" pathLength="1" ${style?`style="${style}"`:''} d="${d}"/>`;
+/* soft fill that fades in */
+const fl=(d,col,pct)=>`<path class="fl" style="fill:color-mix(in srgb,var(${col}) ${pct||14}%,transparent);stroke:none" d="${d}"/>`;
+/* arrow / T-bar markers */
+const mk=(id,col,t)=>t
+  ?`<marker id="${id}" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M5 0V10" style="stroke:var(${col});stroke-width:2.6;fill:none"/></marker>`
+  :`<marker id="${id}" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" style="fill:var(${col})"/></marker>`;
+/* numbered circle marker (draws on the sketch) */
+const mkc=(n,x,y,col)=>`<circle cx="${x}" cy="${y}" r="10" style="fill:var(--surface);stroke:var(${col});stroke-width:2.6"/><text x="${x}" y="${y+4}" text-anchor="middle" style="font:700 12px var(--f-body);fill:var(--ink)">${n}</text>`;
+/* numbered key row (legend), part of a layer's labels */
+const keyRow=(n,y,col,name,desc)=>`<g class="lab"><circle cx="22" cy="${y-4}" r="8.5" style="fill:var(--surface);stroke:var(${col});stroke-width:2.2"/><text x="22" y="${y}" text-anchor="middle" style="font:700 11px var(--f-body);fill:var(--ink)">${n}</text><text x="40" y="${y}" style="fill:var(${col});font:700 13px var(--f-body)">${name}</text><text x="${desc[0]}" y="${y}" class="sub">${desc[1]}</text></g>`;
+const Ly=(id,inner)=>`<g class="layer" id="${id}">${inner}</g>`;
+const Tr=(x,y,inner)=>`<g transform="translate(${x},${y})">${inner}</g>`;
+const plain=(x,y,s,o)=>{o=o||{};return `<text x="${x}" y="${y}" class="${o.sub?'sub':''}" text-anchor="${o.a||'start'}"${o.col?` style="fill:var(${o.col})"`:''}>${s}</text>`};
+
+const PAGE={lsk:'gerd-ulcer-v1',totalMin:260,idle:'Open the 3 PDFs next to this page and press Start.'};
+const STEPS=[
+ {a:0,b:5,t:'Look at the connected map',en:'Read the first table once: each pathology point on the left, the drug or action that answers it on the right. This is the thread for the whole session.',ar:'اقرأ الجدول الأول مرة واحدة: كل نقطة في الباثولوجي على اليسار والدواء الذي يعالجها على اليمين. هذا هو الخيط الذي يربط الجلسة كلها.'},
+ {a:5,b:35,t:'Part 1: GERD and Barrett\'s',en:'Pathology card first (valve, Barrett\'s, complications), then the three pharmacology cards (H2 blockers vs PPIs, antacids and prokinetics, vonoprazan). Press Play all on the GERD drawing.',ar:'بطاقة الباثولوجي أولًا (الصمام ومريء باريت والمضاعفات) ثم بطاقات الأدوية الثلاث (حاصرات H2 مقابل PPI، مضادات الحموضة والمحركات، فونوبرازان). شغّل رسمة GERD.'},
+ {a:35,b:85,t:'Part 2: peptic ulcer',en:'Sites, predisposing factors, the three theories, gross and microscopic picture, complications. Then each drug class and which theory or factor it answers. Play the ulcer and parietal-cell drawings.',ar:'المواضع والعوامل المهيئة والنظريات الثلاث والصورة العيانية والمجهرية والمضاعفات. ثم كل فئة دوائية ونظرية أو عامل تعالجه. شغّل رسمتي القرحة والخلية الجدارية.'},
+ {a:85,b:95,t:'Break',en:'10 minutes. Water, stretch, no phone.',ar:'استرح 10 دقائق، اشرب ماءً وتحرك بعيدًا عن الهاتف.'},
+ {a:95,b:115,t:'Part 3: stomach tumours',en:'Gastric carcinoma (risk factors, gross, microscopic types, spread), GIST, and lymphomas, linking H. pylori to carcinoma and MALT. Play the H. pylori drawing.',ar:'سرطان المعدة (عوامل الخطر والمظهر العياني والأنواع المجهرية والانتشار) وGIST والأورام اللمفاوية مع ربط الملوية بالسرطان وورم MALT. شغّل رسمة الملوية.'},
+ {a:115,b:140,t:'Parts 4 and 5: IBD and salivary tumours',en:'Ulcerative colitis against Crohn\'s disease, side by side. Then the two salivary tumours in a few lines.',ar:'التهاب القولون التقرحي مقابل داء كرون جنبًا إلى جنب. ثم ورما الغدة اللعابية في أسطر قليلة.'},
+ {a:140,b:165,t:'Part 6: viral and chronic hepatitis',en:'Hepatitis A to E, the pathological features, fulminant hepatitis, then chronic hepatitis: causes, grade and stage, and the types of necrosis.',ar:'التهاب الكبد A إلى E والملامح الباثولوجية والتهاب الكبد الخاطف ثم المزمن: الأسباب والدرجة والمرحلة وأنواع النخر.'},
+ {a:165,b:190,t:'Part 7: cirrhosis and liver cancer',en:'Cirrhosis: definition, pathophysiology, classification, gross and microscopic picture, effects. Then HCC. Play the liver drawing.',ar:'التليف الكبدي: التعريف والفيزيولوجيا المرضية والتصنيف والصورة العيانية والمجهرية والتأثيرات. ثم سرطان الخلايا الكبدية. شغّل رسمة الكبد.'},
+ {a:190,b:205,t:'Redraw',en:'Redraw the GERD, ulcer, parietal-cell and H. pylori drawings from memory, then correct with a different colour.',ar:'أعد رسم GERD والقرحة والخلية الجدارية والملوية من الذاكرة ثم صحِّح بلون مختلف.'},
+ {a:205,b:225,t:'Connect',en:'Drug classes side by side, adverse effects and why, the ulcer versus malignant ulcer, UC versus Crohn, hepatitis A to E. Cover the right column and say it.',ar:'الفئات الدوائية جنبًا إلى جنب والأعراض الجانبية وسببها والقرحة مقابل القرحة الخبيثة وCrohn مقابل UC والتهاب الكبد A إلى E. غطِّ العمود الأيمن وقُلها.'},
+ {a:225,b:250,t:'Question cards',en:'Answer aloud. Mark every miss as Review, then do the Review cards once.',ar:'أجب بصوت عالٍ، وعلّم كل خطأ بكلمة Review، ثم أعد بطاقات Review مرة واحدة.'},
+ {a:250,b:260,t:'Log the gaps',en:'In your Study Log write what you could not say, and when you will see it again.',ar:'اكتب في سجل المذاكرة ما عجزت عن قوله ومتى ستراجعه.'}
+];
+const DRAW=[
+ {svg:'svgA',layer:'A1',k:'GERD',t:'A weak valve',
+  en:'The valve between the oesophagus and stomach is incompetent, often with a sliding hernia and a genetic predisposition. Gastric acid regurgitates into the lower oesophagus: food regurgitation, heartburn, pain and dysphagia.',
+  ar:'الصمام بين المريء والمعدة غير كفء وغالبًا مع فتق انزلاقي واستعداد وراثي. ترتد حموضة المعدة إلى أسفل المريء فتسبب ارتداد الطعام وحرقة وألمًا وعسر بلع.'},
+ {svg:'svgA',layer:'A2',k:'GERD',t:'Neglected GERD',
+  en:'The lining changes to columnar (intestinal) metaplasia: Barrett\'s oesophagus, with salmon-pink fingers above the Z-line. Then dysplasia, carcinoma in situ and invasive adenocarcinoma. Ulcers, bleeding and fibrosis (stricture) are the other complications.',
+  ar:'تتحول البطانة الحرشفية إلى بطانة عمودية (حؤولة معوية): مريء باريت بألسنة وردية كالسلمون فوق خط Z. ثم خلل تنسج وسرطان موضعي وسرطان غدي غازٍ. والقرحات والنزف والتليف (تضيق) مضاعفات أخرى.'},
+ {svg:'svgA',layer:'A3',k:'GERD treatment',t:'Three treatment steps',
+  en:'1. Lifestyle: raise the head of the bed 20 cm, lose weight, avoid acid triggers (smoking, spices, NSAIDs), exercise, no tight clothes. 2. Drugs: lower HCl (H2 blockers, PPIs), antacids, prokinetics. 3. Nissen fundoplication.',
+  ar:'1. نمط الحياة: ارفع رأس السرير 20 سم وأنقص الوزن وتجنب مهيجات الحموضة (التدخين والتوابل ومضادات الالتهاب) وتمرن ولا ترتدِ ملابس ضيقة. 2. الأدوية: خفض الحمض (حاصرات H2 وPPI) ومضادات الحموضة والمحركات. 3. جراحة نيسن.'},
+ {svg:'svgB',layer:'B1',k:'Peptic ulcer',t:'Three theories, one ulcer',
+  en:'Hyperacidity (more HCl, especially at night: duodenal ulcer). Infective (H. pylori causes chronic gastritis, then mucosal necrosis and ulcer). Neurogenic (vagal impulses: vasoconstriction, hypersecretion and hypermotility remove the mucin layer). One or more can act together.',
+  ar:'فرط الحموضة (زيادة HCl خاصة ليلًا: قرحة اثني عشرية). نظرية العدوى (الملوية تسبب التهاب معدة مزمنًا ثم نخر المخاطية والقرحة). النظرية العصبية (السيالات المبهمية: تضيق أوعية وفرط إفراز وفرط حركة تزيل طبقة المخاط). ويمكن أن تعمل أكثر من واحدة معًا.'},
+ {svg:'svgB',layer:'B2',k:'Peptic ulcer',t:'What the ulcer does',
+  en:'Usually a single round or oval ulcer, 0.5 to 3 cm with a clear edge; the base is fibrous with the muscle destroyed. Complications: bleeding, perforation (peritonitis, sub-diaphragmatic abscess), scar contraction (pyloric stenosis, hour-glass stomach), penetration into the pancreas, and malignant change in under 1%.',
+  ar:'غالبًا قرحة واحدة مستديرة أو بيضاوية بحجم 0.5 إلى 3 سم وحافة واضحة، وقاعدتها ليفية مع تدمير الطبقة العضلية. المضاعفات: نزف وانثقاب (التهاب صفاق وخراج تحت الحجاب) وانكماش ندبي (تضيق بوابي ومعدة الساعة الرملية) واختراق للبنكرياس وتحول خبيث أقل من 1%.'},
+ {svg:'svgB',layer:'B3',k:'Peptic ulcer',t:'Treat the cause',
+  en:'Lower the acid with PPIs or H2 blockers (antacids for relief); treat H. pylori with a PPI plus antibiotics; protect the mucosa with misoprostol, sucralfate, bismuth or rebamipide. Each drug answers one theory or one side of the balance.',
+  ar:'اخفض الحمض بـPPI أو حاصرات H2 (ومضادات الحموضة للتسكين) وعالج الملوية بـPPI مع مضادات حيوية، واحمِ المخاطية بالميزوبروستول أو السوكرالفات أو البزموث أو الريباميبايد. كل دواء يعالج نظرية أو جانبًا من ميزان العوامل.'},
+ {svg:'svgC',layer:'C1',k:'Acid drugs',t:'Three signals switch the pump on',
+  en:'Histamine (H2 receptor), acetylcholine from the vagus (M1 receptors on enteric ganglia) and gastrin* stimulate the parietal cell. Its H+/K+ ATPase pump secretes HCl, which with pepsin injures the oesophagus or the ulcer.',
+  ar:'الهستامين (مستقبل H2) والأسيتيل كولين من المبهم (مستقبلات M1 على العقد المعوية) والغاسترين* تنبه الخلية الجدارية. تفرز مضخة ⁦H+⁩/⁦K+⁩ ATPase الحمض الذي يؤذي مع البيبسين المريء أو القرحة.'},
+ {svg:'svgC',layer:'C2',k:'Acid drugs',t:'Block the signals',
+  en:'H2 blockers (famotidine, ranitidine, nizatidine) block H2 receptors competitively and reversibly: they act mainly on basal and night acid. Anticholinergics (pirenzepine, dicyclomine) block M1: weak, slow and rarely used.',
+  ar:'حاصرات H2 (فاموتيدين ورانيتيدين ونيزاتيدين) تحجب مستقبلات H2 بشكل تنافسي عكوس وتؤثر خاصة على الحمض القاعدي والليلي. مضادات الكولين (بيرينزيبين وديسيكلومين) تحجب M1: ضعيفة وبطيئة وقليلة الاستعمال.'},
+ {svg:'svgC',layer:'C3',k:'Acid drugs',t:'Block the pump',
+  en:'PPIs are prodrugs that bind the H+/K+ ATPase irreversibly (covalent bond): the pump needs about 18 h to be resynthesised and acid falls by about 90%. Vonoprazan (PCAB) blocks it reversibly by competing with K+. Antacids neutralise acid already made; misoprostol lowers cAMP.',
+  ar:'مثبطات المضخة (PPI) أدوية أولية ترتبط بالمضخة بشكل لا عكوس (رابطة تساهمية) فتحتاج نحو 18 ساعة لتُصنَّع من جديد ويقل الحمض نحو 90%. فونوبرازان (PCAB) يحجبها بشكل عكوس بمنافسة البوتاسيوم. مضادات الحموضة تعادل ما أُفرز أصلًا، والميزوبروستول يخفض cAMP.'},
+ {svg:'svgD',layer:'D1',k:'H. pylori',t:'From infection to gastritis',
+  en:'H. pylori damages the mucosa with urease, CagA and VacA. Chronic gastritis follows, then mucosal necrosis and a peptic ulcer.',
+  ar:'تؤذي الملوية المخاطية باليورياز وCagA وVacA. ينتج التهاب معدة مزمن ثم نخر المخاطية وقرحة هضمية.'},
+ {svg:'svgD',layer:'D2',k:'H. pylori',t:'Long-term risks',
+  en:'Chronic atrophic gastritis with intestinal metaplasia leads to dysplasia and gastric adenocarcinoma (pylorus, lesser curvature). Bacterial stimulation of lymphocytes forms follicular gastritis and a low-grade B-cell MALT lymphoma.',
+  ar:'التهاب المعدة الضموري المزمن مع الحؤولة المعوية يؤدي إلى خلل التنسج وسرطان المعدة الغدي (البواب والانحناء الصغير). وتنبيه البكتيريا للخلايا اللمفاوية يكوّن التهاب معدة جريبيًا وورم MALT لمفاويًا منخفض الدرجة.'},
+ {svg:'svgD',layer:'D3',k:'H. pylori',t:'Eradication',
+  en:'Quadruple therapy (bismuth subsalicylate + metronidazole + tetracycline + PPI) cures about 90%. Triple therapy (PPI + amoxicillin + clarithromycin) is preferred if there is no resistance. Antibiotics alone fail because the organism hides in mucus; less acid brings it out and makes it susceptible.',
+  ar:'العلاج الرباعي (بزموث سالسيلات + ميترونيدازول + تتراسيكلين + PPI) يشفي نحو 90%. العلاج الثلاثي (PPI + أموكسيسيلين + كلاريثروميسين) مفضل عند غياب المقاومة. المضادات وحدها تفشل لأن الجرثومة تختبئ في المخاط، وخفض الحمض يخرجها فتصبح حساسة.'},
+ {svg:'svgE',layer:'E1',k:'Liver',t:'Injury and fibrosis',
+  en:'Viruses (B, C, D), alcohol, autoimmune and metabolic causes injure hepatocytes: necrosis (piecemeal, bridging). Hepatic stellate cells (Ito cells) then lay down collagen types I and III: fibrosis.',
+  ar:'الفيروسات (B وC وD) والكحول والمناعة الذاتية والأسباب الاستقلابية تؤذي الخلايا الكبدية فيحدث نخر (قطعي وجسري). ثم تفرز الخلايا النجمية (خلايا إيتو) الكولاجين من النوع I وIII: تليف.'},
+ {svg:'svgE',layer:'E2',k:'Liver',t:'Cirrhosis and portal hypertension',
+  en:'Regenerating nodules separated by fibrous septa replace the lobular pattern: cirrhosis. The nodules press on hepatic veins and hepatic artery-portal vein anastomoses form: portal hypertension, with varices, ascites and splenomegaly.',
+  ar:'عقيدات تجدد تفصلها حواجز ليفية تحل محل النمط الفصيصي: تليف كبدي. تضغط العقيدات على الأوردة الكبدية وتتكون مفاغرات بين الشريان الكبدي والوريد البابي: فرط ضغط بابي مع دوالٍ واستسقاء وتضخم طحال.'},
+ {svg:'svgE',layer:'E3',k:'Liver',t:'The effects',
+  en:'Oesophageal varices can bleed (PPIs are listed for bleeding varices); hypersplenism causes anaemia, leucopenia and thrombocytopenia; macronodular cirrhosis is the main soil for hepatocellular carcinoma. Impaired function causes gynaecomastia, palmar erythema and arterial spiders.',
+  ar:'قد تنزف دوالي المريء (وPPI مذكورة في نزف الدوالي)، وفرط نشاط الطحال يسبب فقر دم ونقص كريات بيض وصفائح، والتليف كبير العقيدات هو الأرض الأساسية لسرطان الخلايا الكبدية. وضعف الوظيفة يسبب تثدي الرجال واحمرار الراحتين وعناكب وعائية.'}
+];
+
+const CARDS=[
+ /* ---------- GERD (pathology + pharmacology) ---------- */
+ {ty:'Recall',q:'GERD pathology: definition, association and symptoms?',a:'Incontinence of the oesophago-gastric valve lets gastric acid regurgitate into the lower oesophagus; usually with a sliding hernia; genetic predisposition. Food regurgitation, heartburn, pain, dysphagia.',ar:'عدم كفاءة الصمام يسمح بارتداد الحمض، غالبًا مع فتق انزلاقي. الأعراض: ارتداد وحرقة وألم وعسر بلع.'},
+ {ty:'Recall',q:'Barrett\'s oesophagus: what is it and what does it look like?',a:'Columnar or intestinal metaplasia of the oesophageal epithelium in neglected GERD: single or multiple finger-like processes of columnar mucosa above the Z-line, salmon-pink.',ar:'حؤولة عمودية أو معوية بألسنة وردية كالسلمون فوق خط Z.'},
+ {ty:'Recall',q:'Four complications of GERD?',a:'<ul><li>Peptic ulcers (pain referred to the back)</li><li>Bleeding: haematemesis, melaena</li><li>Fibrosis: stricture, dysphagia</li><li>Dysplasia to adenocarcinoma</li></ul>',ar:'قرحات وألم للظهر، نزف، تليف وتضيق، وخلل تنسج ثم سرطان غدي.'},
+ {ty:'Recall',q:'Sequence from reflux oesophagitis to cancer?',a:'Reflux oesophagitis, columnar metaplasia, dysplasia, carcinoma in situ, invasive cancer.',ar:'التهاب، حؤولة عمودية، خلل تنسج، سرطان موضعي ثم غازٍ.'},
+ {ty:'Recall',q:'GERD: the three treatment approaches?',a:'1 Lifestyle (head of bed up 20 cm, lose weight, avoid smoking, spices, NSAIDs; exercise; no tight clothes). 2 Drugs (lower HCl: H2 blockers, PPIs; antacids; prokinetics). 3 Nissen fundoplication.',ar:'نمط الحياة، الأدوية (خفض الحمض ومضادات الحموضة والمحركات)، وجراحة نيسن.'},
+ {ty:'Recall',q:'Advantages of H2 blockers in GERD?',a:'Rapid effect (preferred in an emergency) and no nocturnal breakthrough.',ar:'سريعة (للطوارئ) وبلا اختراق ليلي.'},
+ {ty:'Recall',q:'Four advantages of PPIs over H2 blockers?',a:'More effective (high response rate); more potent (low doses); prolonged (once daily); anti-Helicobacter therapy.',ar:'أكثر فعالية وأقوى وأطول (مرة يوميًا) وتعالج الملوية.'},
+ {ty:'Recall',q:'Which antacids are named for GERD, and how do they work?',a:'Magnesium hydroxide and magnesium sulphate; they neutralise HCl (weak base + HCl = salt + water).',ar:'هيدروكسيد وكبريتات المغنيسيوم تعادل الحمض.'},
+ {ty:'Recall',q:'What is a prokinetic drug?',a:'A drug that raises motility of the upper GIT (not the lower) and gastric evacuation.',ar:'يزيد حركة الجهاز الهضمي العلوي وإفراغ المعدة.'},
+ {ty:'Recall',q:'Name the four prokinetic classes.',a:'5HT4 agonists (mosapride, cisapride, renzapride); D2 blockers (metoclopramide, domperidone); cholinomimetic (bethanechol); erythromycin (motilin receptors).',ar:'ناهضات 5HT4، حاصرات D2، بيثانيكول، وإريثروميسين.'},
+ {ty:'Recall',q:'5HT4 agonists: mechanism and why they are obsolete?',a:'Selective 5HT4 agonists in the enteric nervous system: cAMP up, ACh release up. 5HT4 in the heart: QT prolongation and ventricular arrhythmia.',ar:'ترفع cAMP وتحرر الأسيتيل كولين، لكنها تطيل QT.'},
+ {ty:'Recall',q:'Metoclopramide and domperidone: actions and adverse effects?',a:'Block D2 in the GIT (main action: more motility), weak 5HT4 agonism (ACh up), block D2 in the vomiting centre. ADR (CNS D2 block): parkinsonism (basal ganglia), emotional change (limbic), prolactin up (galactorrhoea, gynaecomastia).',ar:'تزيد الحركة وتحجب مركز القيء، والأعراض: باركنسونية وتغير الانفعال وارتفاع البرولاكتين.'},
+ {ty:'Recall',q:'Bethanechol: why is it better than ACh?',a:'Not hydrolysed by cholinesterase (long duration) and selective for M3 (fewer adverse effects). ADR: diarrhoea and colic.',ar:'لا يتحلل بالكولينستراز ويختار M3.'},
+ {ty:'Recall',q:'Erythromycin as a prokinetic: receptor and problem?',a:'Acts on motilin receptors; rapid tolerance.',ar:'مستقبلات الموتيلين، ويحدث تحمل سريع.'},
+ {ty:'Recall',q:'Vonoprazan: mechanism?',a:'Potassium-competitive, reversible inhibition of the ⁦H+⁩/⁦K+⁩ ATPase (PCAB).',ar:'تثبيط عكوس منافس للبوتاسيوم لمضخة ⁦H+⁩/⁦K+⁩ ATPase.'},
+ {ty:'Recall',q:'Advantages of vonoprazan over PPIs?',a:'Acid stable (no enteric coating); taken right before a meal; more effective and more potent than PPIs; more effective against H. pylori; rapid onset; no night breakthrough; no drug interaction.',ar:'ثابت في الحمض ويؤخذ قبل الوجبة وأقوى وأسرع وبلا اختراق ليلي وبلا تداخلات.'},
+ /* ---------- Peptic ulcer pathology ---------- */
+ {ty:'Recall',q:'Peptic ulcer: where can it occur?',a:'Stomach; first part of duodenum; lower third of oesophagus; jejunum (in gastrojejunostomy); Meckel\'s diverticulum.',ar:'المعدة والاثني عشر الأول والمريء السفلي والصائم بعد المفاغرة ورتج ميكل.'},
+ {ty:'Recall',q:'Which factors predispose to peptic ulcer, and which one is protective?',a:'Males and adults, H. pylori, alcohol, smoking, spices, NSAIDs, hyperacidity, stress, blood group O, ZES, steroids and glucagon. Oestrogen is protective.',ar:'الإستروجين وحده واقٍ.'},
+ {ty:'Recall',q:'Three theories of peptic ulcer pathogenesis?',a:'Hyperacidity (night HCl up: duodenal ulcer); infective (H. pylori gastritis, necrosis, ulcer); neurogenic (vagal impulses: vasoconstriction, hypersecretion, hypermotility, loss of mucin).',ar:'فرط الحموضة، العدوى، والعصبية.'},
+ {ty:'Recall',q:'Peptic ulcer: gross picture?',a:'Usually single, round or oval (saddle-shaped on lesser curvature), 0.5 to 3 cm, clear edge; surrounding mucosa flat or atrophic; thick opaque serosa; enlarged regional nodes.',ar:'مفردة مستديرة أو بيضاوية 0.5-3 سم بحافة واضحة.'},
+ {ty:'Recall',q:'Peptic ulcer: microscopic picture?',a:'Granulation tissue, necrosis and inflammatory cells; fibrous base with the muscle destroyed; endarteritis obliterans and venous thrombi in the base vessels.',ar:'نسيج حبيبي ونخر وقاعدة ليفية والتهاب باطنة الشرايين.'},
+ {ty:'Recall',q:'Complications of a peptic ulcer (five)?',a:'Haemorrhage (haematemesis, melaena); perforation (abscess, peritonitis); scar contraction (pyloric stenosis, hour-glass); penetration (pancreas); malignant change under 1% (untreated ulcers over 3 cm).',ar:'نزف وانثقاب وتضيق بوابي واختراق وتحول خبيث أقل من 1%.'},
+ /* ---------- Peptic ulcer pharmacology ---------- */
+ {ty:'Recall',q:'Peptic ulcer drugs: the four groups?',a:'Lower HCl (PPIs, H2 blockers, anticholinergics, PCABs, antacids); protect the mucosa (PG analogues, bismuth, sucralfate, rebamipide); eradicate H. pylori (antibiotics).',ar:'خفض الحمض وحماية المخاطية وعلاج الملوية.'},
+ {ty:'Recall',q:'Which factors lower ulcer risk (the defences)?',a:'Mucus, bicarbonate, blood flow, prostaglandins, nitric oxide, innate resistance.',ar:'المخاط والبيكربونات وتدفق الدم والبروستاجلاندين وأكسيد النيتريك.'},
+ {ty:'Recall',q:'Which factors raise ulcer risk in the pharmacology slide?',a:'H. pylori; drugs (NSAIDs, corticosteroids, theophylline, iron); stress; smoking (HCl up, bicarbonate down, vasoconstriction); pepsin; alcohol (lowers PG), spicy food, cola, coffee.',ar:'الملوية والأدوية والإجهاد والتدخين والبيبسين والكحول والتوابل والكولا والقهوة.'},
+ {ty:'Recall',q:'PPIs: members and which is the most potent?',a:'Omeprazole, pantoprazole, rabeprazole, lansoprazole (most potent), esomeprazole, dexlansoprazole.',ar:'لانسوبرازول هو الأقوى.'},
+ {ty:'Recall',q:'PPI mechanism and duration?',a:'Prodrugs; irreversible covalent bond to the ⁦H+⁩/⁦K+⁩ ATPase of parietal cells; about 18 h to resynthesise the enzyme; about 90% less HCl.',ar:'أدوية أولية ترتبط بلا رجعة؛ 18 ساعة لإعادة التصنيع.'},
+ {ty:'Recall',q:'Seven uses of PPIs?',a:'GERD (first choice) and erosive oesophagitis; Zollinger-Ellison; bleeding oesophageal varices; NSAID ulcers; stress-ulcer prophylaxis; H. pylori (with antibiotics); prevention of aspiration pneumonia.',ar:'GERD وزولينجر ودوالي المريء وقرحة NSAIDs وقرحة الإجهاد والملوية والالتهاب الرئوي الاستنشاقي.'},
+ {ty:'Recall',q:'Why are PPIs enteric-coated and taken 30 to 60 min before breakfast?',a:'They are weak bases destroyed by HCl and ionised in the stomach. The coat must not be crushed by gastric motility and HCl; absorbed in the alkaline intestine then activated in the acid canaliculi.',ar:'يدمرها الحمض فتُغلَّف وتُؤخذ قبل الإفطار.'},
+ {ty:'Recall',q:'Omeprazole + NaHCO3 (uncoated): what is the benefit?',a:'Stimulates the canaliculi at once, so no need to wait an hour before eating; the bicarbonate protects the uncoated capsule from premature activation.',ar:'ينبه القنيات فورًا ويحمي الكبسولة.'},
+ {ty:'Recall',q:'PPI adverse effects related to low acid?',a:'More infection (pneumonia, enteric, C. difficile); animal gastric tumours (bacterial colonisation, nitroso compounds); less CaCO3 absorption; low vitamin B12 (neuropathy); low magnesium; fractures with long use.',ar:'عدوى وأورام في الحيوان ونقص B12 والمغنيسيوم وكسور.'},
+ {ty:'Recall',q:'PPI drug interactions?',a:'Omeprazole lowers clearance (CYP450) of diazepam, phenytoin, warfarin, cyclosporine. All PPIs lower absorption of ketoconazole, B12, Mg, iron, CaCO3. Omeprazole and esomeprazole block CYP2C19: less clopidogrel effect.',ar:'أوميبرازول يقلل تصفية الديازيبام والفينيتوين والوارفارين والسيكلوسبورين.'},
+ {ty:'Recall',q:'H2 blockers: members and mechanism?',a:'Famotidine, cimetidine, ranitidine, nizatidine; selective competitive reversible H2 blockade in the stomach; basal (nocturnal) acid is reduced more than stimulated acid.',ar:'حاصرات تنافسية عكوسة لمستقبل H2.'},
+ {ty:'Recall',q:'Uses of H2 blockers?',a:'Peptic ulcer (alone if H. pylori negative, with antibiotics if positive); NSAID ulcers; acute stress ulcer (IV in ICU); GERD heartburn (onset about 45 min); resistant urticaria (with H1 blockers); hirsutism (cimetidine).',ar:'قرحة وقرحة الإجهاد وحرقة GERD والشرى المقاوم والشعرانية.'},
+ {ty:'Recall',q:'Cimetidine: three special adverse effects?',a:'Anti-androgenic (prolactin up: gynaecomastia, galactorrhoea); blocks CYP450 (warfarin, phenytoin, clopidogrel, diazepam); short acting.',ar:'مضاد للأندروجين ويثبط CYP450.'},
+ {ty:'Recall',q:'Why does long use of H2 blockers cause rebound hyperacidity?',a:'Tolerance with up-regulation of H2 receptors; take the drug only when needed.',ar:'زيادة مستقبلات H2؛ تؤخذ عند الحاجة فقط.'},
+ {ty:'Recall',q:'Anticholinergics for ulcer: members, mechanism, ADR?',a:'Pirenzepine, dicyclomine: block M1 receptors on enteric ganglia (less HCl, pepsin and gastric emptying). Very rarely used (weak, slow). ADR: dry mouth, blurred vision, retention, tachycardia.',ar:'تحجب M1، ضعيفة وقليلة الاستعمال، وجفاف الفم أشيع عرض.'},
+ {ty:'Recall',q:'Antacid adverse effects: Al, Mg, NaHCO3, CaCO3?',a:'Al(OH)3: constipation. Mg(OH)2: diarrhoea. NaHCO3: metabolic alkalosis, phosphate renal stones, sodium load. CaCO3: milk-alkali syndrome.',ar:'ألمنيوم إمساك، مغنيسيوم إسهال، بيكربونات قلاء، كالسيوم متلازمة الحليب والقلوي.'},
+ {ty:'Recall',q:'Misoprostol: class, mechanism, use and warning?',a:'PGE1 analogue: less HCl (cAMP down), more mucus and bicarbonate, better blood flow. For NSAID gastric ulcer. Diarrhoea; uterine contractions: contraindicated in pregnancy.',ar:'نظير PGE1 لقرحة NSAIDs وممنوع في الحمل.'},
+ {ty:'Recall',q:'Sucralfate: mechanism and the key rule?',a:'Al(OH)3 + sulphated sucrose binds positively charged proteins and forms a barrier over the ulcer. It needs an acid pH, so it is not given with PPIs, H2 blockers or antacids.',ar:'يحتاج الحمض فلا يُعطى مع مثبطاته.'},
+ {ty:'Recall',q:'Bismuth subsalicylate: role and toxicity?',a:'Part of quadruple H. pylori therapy (antimicrobial, less pepsin, more mucus, coats ulcer). Dark teeth, black stool, encephalopathy, osteodystrophy in renal patients, salicylate hypersensitivity.',ar:'من العلاج الرباعي وسميته براز أسود واعتلال دماغي.'},
+ {ty:'Recall',q:'H. pylori regimens: quadruple and triple?',a:'Quadruple: bismuth subsalicylate + metronidazole + tetracycline + PPI (about 90%). Triple: PPI + amoxicillin + clarithromycin (if no resistance).',ar:'الرباعي بزموث + ميترونيدازول + تتراسيكلين + PPI، والثلاثي PPI + أموكسيسيلين + كلاريثروميسين.'},
+ {ty:'Recall',q:'Why do antibiotics alone fail against H. pylori, and how does acid suppression help?',a:'The organism hides in mucus and under epithelial folds. When HCl falls it comes out, multiplies and becomes more susceptible.',ar:'تختبئ في المخاط وعند نقص الحمض تخرج فتصبح حساسة.'},
+ {ty:'Recall',q:'Five precautions to avoid an NSAID ulcer?',a:'Low doses and no NSAID combinations; topical forms; co-prescribe a PPI or misoprostol; avoid corticosteroids except in selected cases; caution in the elderly.',ar:'جرعة منخفضة وموضعي وPPI أو ميزوبروستول وتجنب الكورتيزون والحذر في المسنين.'},
+ {ty:'Recall',q:'Rebamipide: actions and ADR?',a:'Enhances mucosal defence and scavenges free radicals; peptic ulcer; GIT upset and constipation.',ar:'يقوي الدفاع المخاطي ويكنس الجذور الحرة.'},
+ /* ---------- Stomach tumours, IBD, salivary (pathology) ---------- */
+ {ty:'Recall',q:'Gastric carcinoma: risk factors?',a:'H. pylori; chronic atrophic gastritis and intestinal metaplasia; dysplasia; adenomas; chronic peptic ulcer; blood group A; alcohol, tobacco, processed meat; over 50, males.',ar:'الملوية والتهاب ضموري وحؤولة معوية وفصيلة A وكحول وتدخين.'},
+ {ty:'Recall',q:'Gastric carcinoma: favourite sites?',a:'Pre-pyloric region, pyloric antrum, lesser curvature. Rare in the fundus.',ar:'قبل البواب والغار والانحناء الصغير.'},
+ {ty:'Recall',q:'Gastric carcinoma: three gross forms?',a:'Fungating mass; malignant ulcer (raised everted edge, necrotic floor, indurated base); infiltrating, linitis plastica (rigid short stomach, worst prognosis).',ar:'فطري وقرحي ومنتشر (لينيتس بلاستيكا).'},
+ {ty:'Recall',q:'Which gastric carcinoma type has intracellular mucin pushing the nucleus aside, and how does it behave?',a:'Signet ring cell carcinoma: highly invasive, high grade, poor prognosis.',ar:'الخلية الخاتمية: شرسة وإنذارها سيئ.'},
+ {ty:'Recall',q:'Krukenberg tumour: what and how?',a:'Gastric carcinoma spreading across the peritoneal cavity to both ovaries (transcoelomic).',ar:'انتشار سرطان المعدة للمبيضين عبر الصفاق.'},
+ {ty:'Recall',q:'GIST: origin and what decides prognosis?',a:'Interstitial cells of Cajal in the myenteric plexus (muscularis propria); commonest mesenchymal GIT tumour. Prognosis: size, mitotic rate, site.',ar:'من خلايا كاجال، والإنذار بالحجم ومعدل الانقسام والموقع.'},
+ {ty:'Recall',q:'MALT lymphoma: link to H. pylori?',a:'Low-grade B-cell lymphoma: bacterial stimulation makes lymphocyte aggregates (follicular gastritis); lymphocytes erode glands (lympho-epithelial lesions).',ar:'الملوية تحفز تجمعات لمفاوية ثم ورم لمفي منخفض الدرجة.'},
+ {ty:'Recall',q:'Burkitt lymphoma: the classic microscopic picture?',a:'Sheets of medium cells with macrophages: starry sky; very high mitosis; EBV; children.',ar:'سماء مرصعة بالنجوم وEBV.'},
+ {ty:'Recall',q:'Ulcerative colitis: definition and gross picture?',a:'Ulcero-inflammatory disease limited to the colon, mucosa and submucosa only, bloody stools. Starts in the rectum (may be pancolitis); superficial irregular ulcers with sharp edges; pseudopolyps.',ar:'قولون فقط، من المستقيم صعودًا، قرحات سطحية وزوائد كاذبة.'},
+ {ty:'Recall',q:'Ulcerative colitis: microscopic hallmarks?',a:'Goblet cell depletion; crypt abscesses; neutrophils and mononuclear cells in the lamina propria; pseudopolyps.',ar:'نقص الخلايا الكأسية وخراجات الخبايا.'},
+ {ty:'Recall',q:'Crohn\'s disease: gross hallmarks?',a:'Hosepipe thickening, cobblestone, linear ulcers, creeping mesenteric fat, skip lesions; commonest in the ileum.',ar:'سماكة الخرطوم والحصى والقرحات الخطية والآفات المتقطعة.'},
+ {ty:'Recall',q:'Crohn\'s disease: microscopic hallmarks?',a:'Transmural inflammation with lymphoid aggregates and non-caseating granuloma; fibrosis; villous blunting.',ar:'التهاب عبر الجدار وحبيبوم غير متجبن.'},
+ {ty:'Recall',q:'Complications of UC and Crohn\'s disease?',a:'UC: haemorrhage, perforation, colorectal carcinoma, fistula, stricture; extra-colonic: steatosis, biliary cirrhosis, amyloidosis. Crohn: stenosis, haemorrhage, perforation, malabsorption, fistula, amyloidosis.',ar:'نزف وانثقاب وناسور وتضيق، وسرطان القولون يميز UC.'},
+ {ty:'Recall',q:'Pleomorphic adenoma: the three components and the site?',a:'Epithelial (ductal) cells, myoepithelial cells, chondromyxoid stroma. Commonest salivary tumour; parotid.',ar:'ثلاثي الطور: ظهارة وظهارة عضلية وسدى غضروفي مخاطي.'},
+ {ty:'Recall',q:'Warthin tumour: another name and the picture?',a:'Papillary cystadenoma lymphomatosum: double layer of epithelial cells on dense lymphoid stroma; parotid; second commonest benign salivary tumour.',ar:'ورم غدي كيسي حليمي لمفي، طبقتان ظهاريتان على سدى لمفاوي.'},
+ /* ---------- Liver ---------- */
+ {ty:'Recall',q:'Acute viral hepatitis: the microscopic picture?',a:'Panlobular; ballooning degeneration; centrilobular and focal necrosis; acidophilic (Councilman) bodies; lymphocytes, macrophages, eosinophils, plasma cells; cholestasis; Kupffer cell hyperplasia; reticular framework intact.',ar:'انتفاخ الخلايا ونخر مركزي وأجسام Councilman وتضخم خلايا كوبفر.'},
+ {ty:'Recall',q:'Which hepatitis viruses are DNA and which are RNA?',a:'HBV: DNA. HAV, HCV, HDV (defective, needs HBV), HEV: RNA.',ar:'B وحده DNA، والباقي RNA.'},
+ {ty:'Recall',q:'Which hepatitis viruses spread by water or food, and which never become chronic?',a:'HAV and HEV (faeco-oral); neither becomes chronic. HEV in pregnancy can cause fulminant hepatitis.',ar:'A وE فموي برازي ولا يزمنان.'},
+ {ty:'Recall',q:'Outcomes of acute hepatitis?',a:'Complete recovery in most (reticulin preserved, especially HAV); fulminating hepatitis (massive necrosis: days acute, weeks subacute); chronic hepatitis.',ar:'شفاء أو فشل كبدي خاطف أو تحول مزمن.'},
+ {ty:'Recall',q:'Chronic hepatitis: grade versus stage?',a:'Grade = necroinflammatory activity (0 to 4, ending in bridging necrosis). Stage = fibrosis (0 to 4, ending in cirrhosis).',ar:'الدرجة نشاط الالتهاب والمرحلة التليف.'},
+ {ty:'Recall',q:'Piecemeal necrosis: what is it?',a:'Interface hepatitis: inflammation from the portal tract into the periportal zone with necrosis of periportal hepatocytes and a disrupted limiting plate.',ar:'نخر على السطح البيني يخرب الصفيحة الحدية.'},
+ {ty:'Recall',q:'Mallory body: what is it and where is it seen?',a:'Deeply eosinophilic cytoplasmic inclusion of misfolded intermediate filaments. Alcoholic hepatitis, and Mallory-like material in HCV (not HBV).',ar:'كتلة محمضة؛ للكحولي وHCV لا HBV.'},
+ {ty:'Recall',q:'Autoimmune hepatitis: microscopic clues?',a:'Plasma-cell-rich portal inflammation, piecemeal necrosis, emperipolesis, hepatocyte rosettes.',ar:'خلايا بلازمية كثيرة وأزهار كبدية.'},
+ {ty:'Recall',q:'Wilson disease and haemochromatosis: what accumulates and what is the clue?',a:'Wilson: copper (liver, brain, cornea: Kayser-Fleischer ring). Haemochromatosis: iron (liver, pancreas, skin: bronze diabetes).',ar:'ويلسون نحاس وحلقة كايزر-فلايشر، والهيموكروماتوزيس حديد وسكري برونزي.'},
+ {ty:'Recall',q:'Alpha⁦-1⁩ antitrypsin deficiency: organs and why?',a:'Hereditary; lung (emphysema, since alpha⁦-1⁩ is a protease inhibitor) and liver (hepatitis, cirrhosis, HCC).',ar:'رئة (نفاخ) وكبد.'},
+ {ty:'Recall',q:'Cirrhosis: three defining features?',a:'Liver cell degeneration and necrosis; regeneration nodules lacking the lobular pattern; diffuse fibrosis.',ar:'نخر وعقيدات تجديدية وتليف منتشر.'},
+ {ty:'Recall',q:'Who makes the collagen of cirrhosis?',a:'Hepatic stellate (Ito) cells and portal fibroblasts (collagen I and III), stimulated by inflammatory cytokines.',ar:'الخلايا النجمية (إيتو) والخلايا الليفية البابية.'},
+ {ty:'Recall',q:'Cirrhosis: gross and microscopic picture?',a:'Small firm liver, nodular surface, thick capsule, rounded nodules separated by grey-white septa. Loss of lobular pattern; absent or eccentric central vein; septa with lymphocytes and proliferated bile ducts.',ar:'كبد صغير صلب عقيدي وفقدان البنية الفصيصية.'},
+ {ty:'Recall',q:'Portal hypertension in cirrhosis: causes and consequences?',a:'Nodules press on hepatic veins; hepatic artery to portal vein anastomoses. Congestion, splenomegaly, ascites; varices at the lower oesophagus, piles, caput medusae.',ar:'ضغط العقيدات على الأوردة وتحويلات؛ دوالي المريء والبواسير ورأس المدوسة.'},
+ {ty:'Recall',q:'Why does ascites form in cirrhosis?',a:'Portal hypertension, hypoproteinaemia, sodium and water retention (hyperaldosteronism).',ar:'ضغط بابي ونقص بروتين واحتباس صوديوم.'},
+ {ty:'Recall',q:'Cirrhosis: signs of poor liver function?',a:'Hypoproteinaemia; less estrogen inactivation (gynaecomastia, testicular atrophy, less pubic hair, palmar erythema, arterial spiders); less vitamin A.',ar:'ثدي الرجل وضمور الخصية وحمامى كفية وعناكب وعائية.'},
+ {ty:'Recall',q:'HCC: risk factors?',a:'Males over 50; macronodular cirrhosis; HBV and HCV; aflatoxin (Aspergillus flavus); bilharziasis; alcohol, obesity; anabolic steroids; tyrosinaemia.',ar:'تشمع ضخم العقيدات وHBV وHCV وأفلاتوكسين وبلهارسيا.'},
+ {ty:'Recall',q:'HCC: tumour markers and paraneoplastic effects, with the reason for each?',a:'AFP (regenerating hepatocytes). Hypoglycaemia (poor gluconeogenesis, IGF-II); hypercalcaemia (PTHrP); hypercholesterolaemia (abnormal LDL receptor); erythrocytosis (erythropoietin).',ar:'AFP ونقص السكر وارتفاع الكالسيوم والكوليسترول وكثرة الكريات الحمر.'},
+ {ty:'Recall',q:'HCC: which variant has a good prognosis?',a:'Fibrolamellar: polygonal oncocytic cells with fibrous stroma, young patients, no cirrhosis. Worse: portal vein invasion, high AFP, multiple masses.',ar:'الليفي الصفيحي في الشباب بلا تشمع.'},
+ /* ---------- Compare: pharma and patho together ---------- */
+ {ty:'Compare',q:'H2 blockers versus PPIs: mechanism, potency, dosing, special points?',a:'H2: reversible competitive block of the H2 receptor; less potent; rapid; no nocturnal breakthrough; tolerance. PPI: irreversible block of ⁦H+⁩/⁦K+⁩ ATPase (final step); most potent (about 90%); once daily; anti-Helicobacter; first choice in GERD.',ar:'H2 يحجب المستقبل بعكوسية، وPPI يثبط المضخة نهائيًا ولا رجعة.'},
+ {ty:'Compare',q:'PPI versus vonoprazan (PCAB)?',a:'PPI: prodrug, irreversible, needs enteric coat and activation by acid, 30 to 60 min before food. PCAB: reversible ⁦K+⁩-competitive, acid stable, taken before a meal, quicker, more potent, no night breakthrough, no interactions.',ar:'PCAB عكوس وثابت في الحمض وأسرع.'},
+ {ty:'Compare',q:'Antacids versus acid suppressants (H2, PPI)?',a:'Antacids neutralise existing HCl: fastest, short effect. H2 and PPI reduce the secretion: slower, longer. Antacids also chelate other drugs*.',ar:'مضادات الحموضة تعادل فورًا، والمثبطات تقلل الإفراز لمدة أطول.'},
+ {ty:'Compare',q:'Which three signals stimulate the parietal cell, and which drug blocks each?',a:'Histamine (H2 blockers), ACh via M3/M1 (anticholinergics such as pirenzepine), gastrin* (no specific drug in your slides). All converge on ⁦H+⁩/⁦K+⁩ ATPase (PPIs, PCAB).',ar:'هيستامين وأسيتيل كولين وجاسترين، وكلها تلتقي عند المضخة.'},
+ {ty:'Compare',q:'Sucralfate versus misoprostol?',a:'Sucralfate: physical barrier on the ulcer, needs acid, not with PPI/H2/antacid. Misoprostol: PGE1 analogue, less HCl and more mucus/bicarbonate/blood flow; diarrhoea; contraindicated in pregnancy.',ar:'سوكرالفات حاجز يحتاج حمضًا، وميزوبروستول نظير بروستاجلاندين وممنوع في الحمل.'},
+ {ty:'Compare',q:'Misoprostol versus NSAIDs: how do they relate in the stomach?',a:'NSAIDs inhibit COX and lower prostaglandins (less mucus, bicarbonate, blood flow): ulcer. Misoprostol replaces the lost PGE1. Use together in NSAID ulcer prevention.',ar:'مضادات الالتهاب تخفض البروستاجلاندين وميزوبروستول يعوضه.'},
+ {ty:'Compare',q:'Hyperacidity theory versus infective theory: who gets which ulcer and which treatment?',a:'Hyperacidity: duodenal ulcer, night HCl up: H2 blocker or PPI. Infective: H. pylori gastritis then necrosis and ulcer: eradication (PPI + antibiotics). Neurogenic: vagal hyperactivity: anticholinergic (rarely used).',ar:'لكل نظرية علاجها: حمض أو مضاد حيوي أو مضاد كولين.'},
+ {ty:'Compare',q:'Benign peptic ulcer versus malignant (gastric carcinoma) ulcer?',a:'Peptic: round or oval, clear edge, flat surrounding mucosa, fibrous base with endarteritis. Malignant: raised everted edge, necrotic floor, indurated base, often about 2.5 cm or more; biopsy any gastric ulcer*.',ar:'القرحة الخبيثة حافتها مرتفعة منقلبة وقاعدتها متصلبة.'},
+ {ty:'Compare',q:'GERD complications versus peptic ulcer complications?',a:'Both: bleeding, fibrosis and stricture, malignant change. GERD: Barrett\'s, dysplasia, adenocarcinoma (oesophagus). Peptic ulcer: perforation, penetration, pyloric stenosis, malignancy under 1%.',ar:'المشترك: نزف وتضيق وتحول خبيث.'},
+ {ty:'Compare',q:'H. pylori: which three diseases does it link?',a:'Peptic ulcer (duodenal and gastric), gastric carcinoma (via atrophic gastritis and intestinal metaplasia), MALT lymphoma. Eradication treats the first and can regress early MALT lymphoma*.',ar:'قرحة وسرطان معدة ولمفوما MALT.'},
+ {ty:'Compare',q:'Intestinal metaplasia in Barrett\'s versus in the stomach?',a:'Barrett\'s: columnar or intestinal metaplasia above the Z-line from acid reflux, leads to oesophageal adenocarcinoma. Stomach: intestinal metaplasia after H. pylori atrophic gastritis, leads to gastric adenocarcinoma. Same idea, different organ and cause.',ar:'نفس الحؤولة المعوية ونفس الطريق نحو الورم الغدي.'},
+ {ty:'Compare',q:'Ulcerative colitis versus Crohn\'s disease: site, pattern, depth, hallmark?',a:'UC: colon only, rectum upwards, continuous, mucosa/submucosa, crypt abscesses, pseudopolyps, carcinoma. Crohn: any part, ileum commonest, skip lesions, transmural, non-caseating granuloma, fistula and stricture.',ar:'UC مستمر وسطحي، وكرون متقطع وعبر الجدار مع حبيبوم.'},
+ {ty:'Compare',q:'Hepatitis A versus B: nucleic acid, spread, chronicity?',a:'HAV: RNA, faeco-oral, never chronic, mild. HBV: DNA, blood/sexual/mother to child, can be chronic, cirrhosis and HCC.',ar:'A فموي برازي لا يزمن، وB دموي وقد يزمن.'},
+ {ty:'Compare',q:'Hepatitis D versus the others?',a:'Defective RNA virus that needs HBV to replicate; co-infection or superinfection can be fulminating.',ar:'يحتاج HBV ليتكاثر.'},
+ {ty:'Compare',q:'PPI adverse effects versus H2 blocker adverse effects?',a:'PPI (low acid): infection, C. difficile, low B12, low Mg, less CaCO3 absorption, fractures. H2: cimetidine anti-androgen effect and CYP block; tolerance and rebound with long use.',ar:'PPI عدوى ونقص B12 وMg، وH2 تحمل وسيميتيدين مضاد أندروجين.'},
+ {ty:'Compare',q:'Metoclopramide versus domperidone?',a:'Both D2 blockers (prokinetic, antiemetic). Metoclopramide crosses the blood-brain barrier: parkinsonism, emotional change; both raise prolactin.',ar:'الأول يعبر الدماغ فيسبب أعراضًا مركزية.'},
+ {ty:'Compare',q:'Bethanechol versus ACh itself?',a:'Bethanechol is resistant to cholinesterase (long) and selective for M3 (fewer effects). ADR still cholinergic: diarrhoea, colic.',ar:'بيثانيكول أطول وأكثر انتقائية.'},
+ {ty:'Compare',q:'Cirrhosis versus chronic hepatitis (stage 3 and 4)?',a:'Stage 3: septal fibrosis with distorted architecture but no cirrhosis. Stage 4: cirrhosis with regeneration nodules. Chronic hepatitis is the road; cirrhosis is the destination.',ar:'المرحلة 4 هي التشمع بعقيدات تجديدية.'},
+ /* ---------- Clinical ---------- */
+ {ty:'Clinical',q:'A 45-year-old man has epigastric pain that wakes him at night and eases with food. Endoscopy shows a duodenal ulcer; H. pylori test is positive. Treatment?',a:'Quadruple therapy (bismuth + metronidazole + tetracycline + PPI) or triple (PPI + amoxicillin + clarithromycin). Acid suppression helps the antibiotics reach the organism.',ar:'علاج رباعي أو ثلاثي لاستئصال الملوية.'},
+ {ty:'Clinical',q:'A woman on long-term diclofenac for arthritis develops a gastric ulcer. Management?',a:'Stop or reduce the NSAID; PPI (better) or misoprostol; test and treat H. pylori. Misoprostol is not given in pregnancy.',ar:'أوقف المسكن وأعطِ PPI أو ميزوبروستول وافحص الملوية.'},
+ {ty:'Clinical',q:'A man with heartburn for 10 years, now salmon-pink tongues above the Z-line. What is it and what next?',a:'Barrett\'s oesophagus (intestinal metaplasia). PPIs*, surveillance biopsies for dysplasia; risk of adenocarcinoma. Fundoplication if refractory.',ar:'مريء باريت: مضخات البروتون ومراقبة بالخزعة.'},
+ {ty:'Clinical',q:'A patient on omeprazole for two years has tingling in the feet and a low haemoglobin. Which adverse effect fits?',a:'Low vitamin B12 absorption (needs acid to release it from food); also check magnesium.',ar:'نقص B12 بسبب قلة الحمض.'},
+ {ty:'Clinical',q:'An ICU patient on a ventilator is at risk of GI bleeding. Drug choice and why?',a:'Stress-ulcer prophylaxis with a PPI (IV H2 blockers show tolerance). Also reduces aspiration pneumonia risk in the slides.',ar:'وقاية من قرحة الإجهاد بـ PPI.'},
+ {ty:'Clinical',q:'A man taking cimetidine develops breast enlargement and is on warfarin and phenytoin. Explain.',a:'Cimetidine is anti-androgenic (prolactin up, gynaecomastia) and blocks CYP450, raising warfarin and phenytoin levels. Switch to famotidine or a different PPI*.',ar:'سيميتيدين مضاد أندروجين ويثبط الإنزيمات.'},
+ {ty:'Clinical',q:'A young woman on metoclopramide for nausea has tremor and rigidity, and milk from the breasts. Explain.',a:'D2 blockade in the basal ganglia (parkinsonism) and in the pituitary pathway (prolactin up, galactorrhoea).',ar:'حجب D2: باركنسونية وارتفاع برولاكتين.'},
+ {ty:'Clinical',q:'A patient has a peptic ulcer, diarrhoea and recurrent ulcers in the jejunum. Which condition and drug?',a:'Zollinger-Ellison (gastrin-secreting tumour). High-dose PPI.',ar:'زولينجر-إليسون: جرعة PPI عالية.'},
+ {ty:'Clinical',q:'A man with a long ulcer history vomits undigested food; barium shows a narrow pylorus or an hour-glass stomach. What happened?',a:'Scar contraction: pyloric stenosis or hour-glass stomach. Always biopsy to exclude cancer.',ar:'تضيق بوابي أو معدة ساعة رملية بعد الالتئام.'},
+ {ty:'Clinical',q:'A 62-year-old has weight loss and an ovarian mass on both sides; gastroscopy shows a malignant ulcer. Diagnosis?',a:'Gastric carcinoma (signet ring) with Krukenberg ovarian metastases.',ar:'سرطان معدة ومبيضان نقيليان.'},
+ {ty:'Clinical',q:'A 25-year-old has bloody diarrhoea; colonoscopy shows continuous rectal ulceration and pseudopolyps; biopsy: crypt abscesses. Diagnosis and long-term risk?',a:'Ulcerative colitis; colorectal carcinoma.',ar:'قولون قرحي وخطر سرطان القولون.'},
+ {ty:'Clinical',q:'A young man has ileal pain, fistulae and a biopsy with transmural non-caseating granulomas. Diagnosis?',a:'Crohn\'s disease.',ar:'داء كرون.'},
+ {ty:'Clinical',q:'A 40-year-old has a painless slowly growing parotid nodule; biopsy: ductal and myoepithelial cells in chondromyxoid stroma. Diagnosis?',a:'Pleomorphic adenoma.',ar:'الورم الغدي متعدد الأشكال.'},
+ {ty:'Clinical',q:'A child has jaundice after a water-borne outbreak, recovers fully. Virus and why no chronic disease?',a:'HAV (faeco-oral RNA virus); injury is limited to portal/periportal areas and the reticulin framework is preserved; never chronic.',ar:'A لا يزمن.'},
+ {ty:'Clinical',q:'A pregnant woman in an endemic area develops acute liver failure after a jaundice outbreak. Virus?',a:'HEV (fulminant hepatitis in pregnancy).',ar:'E في الحمل يسبب فشلًا كبديًا خاطفًا.'},
+ {ty:'Clinical',q:'An alcoholic has haematemesis. Liver is small and nodular. What is the source of the bleeding and the mechanism?',a:'Oesophageal varices from portal hypertension in cirrhosis (nodules press on hepatic veins; arterio-portal shunts). Your pharma slides list PPIs for bleeding oesophageal varices.',ar:'دوالي المريء من ارتفاع الضغط البابي.'},
+ {ty:'Clinical',q:'A man with cirrhosis has a new liver mass, AFP very high and low blood glucose. Diagnosis and explanation of the glucose?',a:'Hepatocellular carcinoma. Hypoglycaemia: poor gluconeogenesis and tumour IGF-II.',ar:'سرطان خلايا كبدية ونقص السكر لأسباب استقلابية.'},
+ {ty:'Clinical',q:'A young man with liver disease, tremor, and a golden-brown ring around the cornea. What accumulates?',a:'Wilson disease: copper (Kayser-Fleischer ring).',ar:'ويلسون: نحاس.'},
+ {ty:'Clinical',q:'A man with bronze skin, diabetes and cirrhosis. Diagnosis?',a:'Haemochromatosis (iron overload): bronze diabetes.',ar:'سكري برونزي وحديد زائد.'},
+ /* ---------- MCQ ---------- */
+ {ty:'MCQ',q:'Which drug irreversibly blocks the ⁦H+⁩/⁦K+⁩ ATPase of the parietal cell?',opts:['Famotidine','Omeprazole','Pirenzepine','Misoprostol'],a:'B. Omeprazole (PPI).',ar:'مثبطات المضخة ترتبط بلا رجعة.'},
+ {ty:'MCQ',q:'A PPI should be taken:',opts:['With antacids','At bedtime only','30 to 60 minutes before breakfast','After a large meal'],a:'C. 30 to 60 minutes before breakfast.',ar:'قبل الإفطار لتنشيط المضخات.'},
+ {ty:'MCQ',q:'Which drug should NOT be given together with PPIs, H2 blockers or antacids?',opts:['Sucralfate','Misoprostol','Amoxicillin','Bismuth subsalicylate'],a:'A. Sucralfate: it needs an acid pH.',ar:'سوكرالفات يحتاج الحمض.'},
+ {ty:'MCQ',q:'Misoprostol is contraindicated in:',opts:['Elderly patients','Pregnancy','Hypertension','Asthma'],a:'B. Pregnancy (uterine contractions).',ar:'ينشط الرحم.'},
+ {ty:'MCQ',q:'Gynaecomastia and CYP450 inhibition are typical of:',opts:['Famotidine','Ranitidine','Cimetidine','Nizatidine'],a:'C. Cimetidine.',ar:'سيميتيدين مضاد أندروجين ومثبط إنزيمات.'},
+ {ty:'MCQ',q:'Which prokinetic carries the risk of parkinsonism and raised prolactin?',opts:['Cisapride','Metoclopramide','Bethanechol','Erythromycin'],a:'B. Metoclopramide (D2 block).',ar:'حجب D2 مركزي.'},
+ {ty:'MCQ',q:'Cisapride was withdrawn because of:',opts:['Liver failure','QT prolongation','Parkinsonism','Hypotension'],a:'B. QT prolongation (cardiac 5HT4).',ar:'إطالة QT.'},
+ {ty:'MCQ',q:'Which antacid causes constipation?',opts:['Magnesium hydroxide','Aluminium hydroxide','Sodium bicarbonate','Calcium carbonate'],a:'B. Aluminium hydroxide.',ar:'الألمنيوم إمساك والمغنيسيوم إسهال.'},
+ {ty:'MCQ',q:'Milk-alkali syndrome is a risk of:',opts:['CaCO3','Al(OH)3','Mg(OH)2','Sucralfate'],a:'A. Calcium carbonate.',ar:'كربونات الكالسيوم.'},
+ {ty:'MCQ',q:'Black stool and dark teeth with encephalopathy in renal patients suggest toxicity of:',opts:['Sucralfate','Bismuth subsalicylate','Misoprostol','Rebamipide'],a:'B. Bismuth subsalicylate.',ar:'كبريتيد البزموث يسود البراز.'},
+ {ty:'MCQ',q:'The standard triple therapy for H. pylori is:',opts:['PPI + amoxicillin + clarithromycin','H2 blocker + metronidazole + tetracycline','PPI + sucralfate + bismuth','Omeprazole + misoprostol'],a:'A. PPI + amoxicillin + clarithromycin.',ar:'الثلاثي القياسي.'},
+ {ty:'MCQ',q:'Omeprazole and esomeprazole reduce the effect of which drug (CYP2C19)?',opts:['Clopidogrel','Aspirin','Amoxicillin','Bismuth'],a:'A. Clopidogrel.',ar:'يمنعان تنشيطه.'},
+ {ty:'MCQ',q:'Barrett\'s oesophagus is:',opts:['Squamous hyperplasia','Columnar/intestinal metaplasia above the Z-line','A benign polyp','An oesophageal web'],a:'B. Columnar (intestinal) metaplasia above the Z-line.',ar:'حؤولة عمودية معوية.'},
+ {ty:'MCQ',q:'Barrett\'s oesophagus predisposes to:',opts:['Squamous carcinoma','Adenocarcinoma','Lymphoma','Leiomyosarcoma'],a:'B. Adenocarcinoma.',ar:'سرطان غدي.'},
+ {ty:'MCQ',q:'The commonest complication of a peptic ulcer is:',opts:['Haemorrhage','Pyloric stenosis','Malignant change','Penetration'],a:'A. Haemorrhage (a leading complication).',ar:'النزف الأشيع.'},
+ {ty:'MCQ',q:'Which protects against peptic ulcer?',opts:['Smoking','Oestrogen','Blood group O','Steroids'],a:'B. Oestrogen.',ar:'الإستروجين واقٍ.'},
+ {ty:'MCQ',q:'Krukenberg tumour is spread of gastric cancer to the:',opts:['Liver','Both ovaries','Lungs','Bone'],a:'B. Both ovaries.',ar:'المبيضان.'},
+ {ty:'MCQ',q:'GIST arises from:',opts:['Smooth muscle cells','Interstitial cells of Cajal','Neuroendocrine cells','Lymphocytes'],a:'B. Interstitial cells of Cajal.',ar:'خلايا كاجال.'},
+ {ty:'MCQ',q:'A feature of Crohn\'s disease but NOT ulcerative colitis:',opts:['Crypt abscess','Non-caseating granuloma','Pseudopolyps','Goblet cell depletion'],a:'B. Non-caseating granuloma.',ar:'الحبيبوم مميز لكرون.'},
+ {ty:'MCQ',q:'Pleomorphic adenoma is:',opts:['A malignant lymphoid tumour','Triphasic: epithelial, myoepithelial and chondromyxoid stroma','A cyst with lymphoid stroma','A squamous carcinoma'],a:'B. Triphasic benign tumour.',ar:'ثلاثي الطور.'},
+ {ty:'MCQ',q:'Which hepatitis virus is a defective RNA virus requiring HBV?',opts:['HAV','HCV','HDV','HEV'],a:'C. HDV.',ar:'D يحتاج B.'},
+ {ty:'MCQ',q:'Councilman (acidophilic) bodies are:',opts:['Mallory bodies','Shrunken eosinophilic apoptotic hepatocytes','Iron deposits','Copper granules'],a:'B. Shrunken eosinophilic hepatocytes with pyknotic nuclei.',ar:'خلايا كبدية ميتة محمضة.'},
+ {ty:'MCQ',q:'Mallory bodies are seen in:',opts:['HBV only','Alcoholic hepatitis','HAV','Wilson disease only'],a:'B. Alcoholic hepatitis (and HCV-like material).',ar:'التهاب كبد كحولي.'},
+ {ty:'MCQ',q:'Which is NOT a feature of cirrhosis?',opts:['Regeneration nodules','Diffuse fibrosis','Preserved lobular pattern','Cell necrosis'],a:'C. Preserved lobular pattern (it is lost).',ar:'البنية الفصيصية تضيع.'},
+ {ty:'MCQ',q:'Oesophageal varices in cirrhosis result from:',opts:['Portal hypertension','Hypoalbuminaemia','Thrombocytopenia','Hyperaldosteronism'],a:'A. Portal hypertension.',ar:'ارتفاع الضغط البابي.'},
+ {ty:'MCQ',q:'Hypoglycaemia in HCC is due to:',opts:['PTHrP','Erythropoietin','IGF-II and poor gluconeogenesis','Abnormal LDL receptor'],a:'C. IGF-II and poor gluconeogenesis.',ar:'IGF-II وضعف تكوين الجلوكوز.'},
+ {ty:'MCQ',q:'HCC with a good prognosis in young patients without cirrhosis is the:',opts:['Classic type','Sclerosing type','Sarcomatoid type','Fibrolamellar type'],a:'D. Fibrolamellar.',ar:'الليفي الصفيحي.'},
+ {ty:'MCQ',q:'Kayser-Fleischer ring is due to excess:',opts:['Iron','Copper','Zinc','Calcium'],a:'B. Copper (Wilson disease).',ar:'النحاس.'},
+ {ty:'MCQ',q:'AFP in HCC is produced by:',opts:['Yolk sac cells only','Regenerating hepatocytes','Kupffer cells','Stellate cells'],a:'B. Regenerating hepatocytes (also a fetal protein).',ar:'خلايا الكبد المتجددة.'},
+];
+
+/* ===== helpers ===== */
+const bx=(x,y,w,h,col,t1,t2,t3)=>`<rect class="fl" x="${x}" y="${y}" width="${w}" height="${h}" rx="10" style="fill:color-mix(in srgb,var(${col}) 14%,var(--surface))"/><rect class="sk dr" pathLength="1" x="${x}" y="${y}" width="${w}" height="${h}" rx="10" style="stroke:var(${col});stroke-width:2.2"/><g class="lab"><text x="${x+w/2}" y="${y+19}" text-anchor="middle">${t1}</text>${t2?`<text class="sub" x="${x+w/2}" y="${y+35}" text-anchor="middle">${t2}</text>`:''}${t3?`<text class="sub" x="${x+w/2}" y="${y+49}" text-anchor="middle">${t3}</text>`:''}</g>`;
+const bxl=(x,y,w,h,col,head,lines)=>`<rect class="fl" x="${x}" y="${y}" width="${w}" height="${h}" rx="10" style="fill:color-mix(in srgb,var(${col}) 12%,var(--surface))"/><rect class="sk dr" pathLength="1" x="${x}" y="${y}" width="${w}" height="${h}" rx="10" style="stroke:var(${col});stroke-width:2.2"/><g class="lab"><text x="${x+12}" y="${y+20}" style="fill:var(${col})">${head}</text>${lines.map((s,i)=>`<text class="sub" x="${x+12}" y="${y+38+15*i}">${s}</text>`).join('')}</g>`;
+const pw=(d,col,w,m)=>`<path class="dr arrowp" pathLength="1" style="stroke:var(${col});stroke-width:${w}" d="${d}"${m?` marker-end="url(#${m})"`:''}/>`;
+const defsP=`<defs>${mk('pa','--m-ta')}</defs>`;
+/* column x: 10, 235, 460 (w 170); row y: 20, 130, 240 (h 56) */
+const CX=[10,235,460], RY=[20,130,240], W=170, H=58;
+const nd=(c,r,col,t1,t2,t3)=>bx(CX[c],RY[r],W,H,col,t1,t2,t3);
+const hR=(r,c1,c2)=>{const y=RY[r]+H/2;return c2>c1?pw(`M${CX[c1]+W+3} ${y}H${CX[c2]-5}`,'--m-ta',2.6,'pa'):pw(`M${CX[c1]-3} ${y}H${CX[c2]+W+5}`,'--m-ta',2.6,'pa')};
+const vD=(c,r)=>pw(`M${CX[c]+W/2} ${RY[r]+H+2}V${RY[r+1]-5}`,'--m-ta',2.6,'pa');
+
+
+
+/* ===== p10 diagrams: pathology (top) and the drug that answers it ===== */
+const defsT=`<defs>${mk('pa','--m-ta')}${mk('pt','--m-io',true)}</defs>`;
+const tb=(d)=>pw(d,'--m-io',2.6,'pt');           /* T-bar arrow: "blocks" */
+const hT=(r,c1,c2)=>{const y=RY[r]+H/2;return c2>c1?tb(`M${CX[c1]+W+3} ${y}H${CX[c2]-7}`):tb(`M${CX[c1]-3} ${y}H${CX[c2]+W+7}`)};
+
+/* ===== svgA: GERD ===== */
+const A1=Ly('A1',nd(0,0,'--h3','Weak lower valve','LES incontinence','sliding hernia, genetic')+nd(1,0,'--m-ta','Acid regurgitates','into lower oesophagus')+nd(2,0,'--m-eo','Symptoms','heartburn, regurgitation','pain, dysphagia')+hR(0,0,1)+hR(0,1,2));
+const A2=Ly('A2',nd(2,1,'--m-io','Barrett\'s oesophagus','columnar metaplasia','salmon-pink above Z-line')+nd(1,1,'--h6','Dysplasia','then carcinoma in situ')+nd(0,1,'--m-eo','Adenocarcinoma','invasive cancer')+vD(2,0)+hR(1,2,1)+hR(1,1,0)
+  +bxl(10,330,620,74,'--m-eo','Other complications of GERD',['Peptic ulcers (pain referred to the back) and bleeding: haematemesis, melaena.','Fibrosis: stricture and dysphagia. Dysplasia may turn malignant.']));
+const A3=Ly('A3',nd(0,2,'--m-eo','1. Lifestyle','head of bed up 20 cm','weight, no NSAIDs')+nd(1,2,'--m-io','2. Drugs','PPI, H2 blocker','antacid, prokinetic')+nd(2,2,'--h6','3. Nissen','fundoplication','rebuilds the valve')+hR(2,0,1)+hR(2,1,2));
+$('#svgA').innerHTML=defsT+A1+A2+A3;
+
+/* ===== svgB: peptic ulcer ===== */
+const B1=Ly('B1',nd(0,0,'--h3','Hyperacidity','night HCl up','duodenal ulcer')+pw('M95 80L250 126','--m-ta',2.6,'pa')+nd(1,0,'--m-io','Infective','H. pylori gastritis','mucosal necrosis')+pw(`M${CX[1]+W/2} 80V125`,'--m-ta',2.6,'pa')+nd(2,0,'--m-ta','Neurogenic','vagal impulses','acid and motility up')+pw('M545 80L390 126','--m-ta',2.6,'pa')+nd(1,1,'--m-eo','Peptic ulcer','mucin layer lost','mucosa eroded'));
+const B2=Ly('B2',nd(0,2,'--m-eo','Bleeding','haematemesis, melaena')+pw('M262 192L104 236','--m-ta',2.6,'pa')+nd(1,2,'--h6','Perforation','peritonitis','sub-diaphragmatic abscess')+pw(`M${CX[1]+W/2} 192V235`,'--m-ta',2.6,'pa')+nd(2,2,'--m-ta','Scar contraction','pyloric stenosis','hour-glass stomach')+pw('M378 192L536 236','--m-ta',2.6,'pa')
+  +bxl(10,330,620,74,'--m-eo','Also remember',['Penetration: adhesions to the pancreas. Malignant change: under 1%, ulcers over 3 cm.','Protect the mucosa: misoprostol, sucralfate, bismuth, rebamipide.']));
+const B3=Ly('B3',nd(0,1,'--m-io','Acid drugs','PPI, H2 blocker','antacid, PCAB')+hT(1,0,1)+nd(2,1,'--h7','H. pylori drugs','PPI + 2 antibiotics','or bismuth quadruple')+hT(1,2,1));
+$('#svgB').innerHTML=defsT+B1+B2+B3;
+
+/* ===== svgC: acid drugs on the parietal cell ===== */
+const C1=Ly('C1',nd(0,0,'--m-ta','Histamine','H2 receptor')+pw('M95 80L250 126','--m-ta',2.6,'pa')+nd(1,0,'--m-eo','Acetylcholine','vagus, M1 receptors')+pw(`M${CX[1]+W/2} 80V125`,'--m-ta',2.6,'pa')+nd(2,0,'--h6','Gastrin*','from G cells')+pw('M545 80L390 126','--m-ta',2.6,'pa')
+  +nd(1,1,'--m-io','Parietal cell','H+/K+ ATPase pump','secretes HCl')+vD(1,1)+nd(1,2,'--h3','HCl + pepsin','reflux and ulcer injury'));
+const C2=Ly('C2',nd(0,1,'--m-ta','H2 blockers','famotidine, ranitidine','reversible')+hT(1,0,1)+nd(2,1,'--m-eo','Anticholinergics','pirenzepine, dicyclomine','block M1; weak, rare')+hT(1,2,1));
+const C3=Ly('C3',nd(0,2,'--m-io','PPIs','irreversible, covalent','18 h to resynthesise')+tb('M95 238L250 196')+nd(2,2,'--h7','Vonoprazan (PCAB)','reversible, competes','with K+')+tb('M545 238L390 196')
+  +bxl(10,330,620,74,'--h3','Also',['Antacids (Al or Mg hydroxide, calcium carbonate) neutralise HCl in the lumen: symptom relief.','Misoprostol (PGE1 analogue) lowers cAMP: less HCl, more mucus and bicarbonate.']));
+$('#svgC').innerHTML=defsT+C1+C2+C3;
+
+/* ===== svgD: H. pylori and the stomach ===== */
+const D1=Ly('D1',nd(0,0,'--h3','H. pylori','urease, CagA, VacA')+nd(1,0,'--m-io','Chronic gastritis','mucosa inflamed')+nd(2,0,'--m-eo','Mucosal necrosis','peptic ulcer')+hR(0,0,1)+hR(0,1,2));
+const D2=Ly('D2',nd(1,1,'--m-ta','Atrophic gastritis','intestinal metaplasia')+nd(2,1,'--h6','MALT lymphoma','low-grade B cell')+nd(0,1,'--m-io','Dysplasia','intraepithelial neoplasia')+nd(0,2,'--m-eo','Adenocarcinoma','pylorus, lesser curve')+vD(1,0)+hR(1,1,2)+hR(1,1,0)+vD(0,1));
+const D3=Ly('D3',nd(2,2,'--m-io','Eradication','PPI + antibiotics','ulcer; early MALT*')+tb(`M${CX[2]+W/2} ${RY[2]-3}V${RY[1]+H+7}`)
+  +bxl(10,330,620,92,'--m-io','Treatment',['Quadruple: bismuth subsalicylate + metronidazole + tetracycline + PPI (about 90%).','Triple: PPI + amoxicillin + clarithromycin (if no resistance).','Antibiotics alone fail: it hides in mucus. Less acid brings it out, so it becomes susceptible.']));
+$('#svgD').innerHTML=defsT+D1+D2+D3;
+
+/* ===== svgE: liver ===== */
+const E1=Ly('E1',nd(0,0,'--h3','Injury','viruses, alcohol','autoimmune, metabolic')+nd(1,0,'--m-io','Hepatocyte necrosis','piecemeal, bridging')+nd(2,0,'--m-ta','Fibrosis','stellate cells make','collagen I and III')+hR(0,0,1)+hR(0,1,2));
+const E2=Ly('E2',nd(2,1,'--m-eo','Cirrhosis','nodules + fibrous septa','no lobular pattern')+nd(1,1,'--h6','Portal hypertension','nodules press on veins')+nd(0,1,'--m-io','Varices, ascites','splenomegaly')+vD(2,0)+hR(1,2,1)+hR(1,1,0));
+const E3=Ly('E3',nd(0,2,'--m-eo','Variceal bleeding','haematemesis','PPIs are used')+nd(1,2,'--h7','Hypersplenism','anaemia, leucopenia','thrombocytopenia')+nd(2,2,'--h3','Liver cancer (HCC)','macronodular, over 50','AFP raised')+vD(0,1)+vD(1,1)+vD(2,1)
+  +bxl(10,330,620,74,'--m-eo','Impaired liver function',['Low albumin; less estrogen inactivation: gynaecomastia, testicular atrophy.','Palmar erythema, arterial spiders, less vitamin A formation.']));
+$('#svgE').innerHTML=defsT+E1+E2+E3;
+
+/* ===== engine ===== */
+let S={steps:{},cards:{}};
+try{const v=localStorage.getItem(PAGE.lsk);if(v)S=Object.assign(S,JSON.parse(v))}catch(e){}
+const save=()=>{try{localStorage.setItem(PAGE.lsk,JSON.stringify(S))}catch(e){}};
+
+/* nav */
+const navB=[...document.querySelectorAll('#nav button')],secs=navB.map(b=>b.dataset.go);
+$('#nav').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;document.getElementById(b.dataset.go).scrollIntoView({behavior:'smooth',block:'start'})});
+addEventListener('scroll',()=>{let cur=secs[0];secs.forEach(id=>{const el=document.getElementById(id);if(el&&el.getBoundingClientRect().top<140)cur=id});navB.forEach(b=>b.classList.toggle('on',b.dataset.go===cur))},{passive:true});
+
+/* timeline */
+const fmt=m=>m===0?'0:00':`${Math.floor(m/60)}:${pad(m%60)}`;
+const TOT=PAGE.totalMin*60,CIRC=358.1;
+$('#clOf').textContent='of '+Math.floor(TOT/3600)+':'+pad(Math.floor(TOT%3600/60))+':00';
+$('#tl').innerHTML=STEPS.map((s,i)=>`<li class="step" id="st${i}"><div class="tm"><b>${fmt(s.a)}</b>${s.b-s.a} min</div><div class="spine"><span class="node"></span></div>
+ <div class="scard"><div class="top"><h4>${s.t}</h4><span class="len">${fmt(s.a)} to ${fmt(s.b)}</span></div><p class="en">${s.en}</p><p class="ar" lang="ar">${s.ar}</p>
+ <button class="tick" data-st="${i}" aria-label="Mark step ${i+1} done"><i><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i>Done</button></div></li>`).join('');
+const CL={el:0,run:false,t:null,last:0};
+function paintSteps(){STEPS.forEach((s,i)=>{const e=$('#st'+i);e.classList.toggle('done',!!S.steps[i]);e.classList.toggle('cur',CL.run&&CL.el/60>=s.a&&CL.el/60<s.b)})}
+function paintClock(){
+  const e=Math.min(CL.el,TOT),h=Math.floor(e/3600),m=Math.floor(e%3600/60),s=e%60;
+  $('#clTxt').textContent=`${h}:${pad(m)}:${pad(s)}`;
+  $('#clRing').style.strokeDashoffset=CIRC*(1-e/TOT);
+  const idx=STEPS.findIndex(x=>e/60>=x.a&&e/60<x.b);
+  if(CL.el>0||CL.run){
+    if(e>=TOT){$('#clStep').textContent='Block finished';$('#clNow').textContent='Write your gaps in the Study Log and rest.'}
+    else if(idx>=0){const st=STEPS[idx];$('#clStep').textContent=`${idx+1}. ${st.t}`;$('#clNow').textContent=`${Math.ceil((st.b*60-e)/60)} min left in this step.`}
+  }
+  paintSteps();
+}
+function clStop(){CL.run=false;clearInterval(CL.t);$('#clGo').textContent=CL.el>0?'Resume':'Start'}
+$('#clGo').addEventListener('click',()=>{
+  if(CL.run){clStop();paintClock();return}
+  CL.run=true;CL.last=Date.now();$('#clGo').textContent='Pause';
+  CL.t=setInterval(()=>{const n=Date.now();CL.el+=Math.round((n-CL.last)/1000);CL.last=n;if(CL.el>=TOT){CL.el=TOT;clStop()}paintClock()},1000);paintClock()});
+$('#clReset').addEventListener('click',()=>{clStop();CL.el=0;$('#clGo').textContent='Start';$('#clStep').textContent='Ready when you are';$('#clNow').textContent=PAGE.idle;paintClock()});
+$('#tl').addEventListener('click',e=>{const b=e.target.closest('.tick');if(!b)return;const i=b.dataset.st;if(S.steps[i])delete S.steps[i];else S.steps[i]=1;save();paintSteps()});
+paintSteps();
+
+/* blurred recall sheets */
+document.querySelectorAll('.rtab').forEach(t=>{
+  t.addEventListener('click',e=>{const c=e.target.closest('td.rv');if(c)c.classList.toggle('shown')});
+  const b=t.querySelector('.rtBtn');let on=false;
+  if(b)b.addEventListener('click',()=>{on=!on;t.querySelectorAll('td.rv').forEach(c=>c.classList.toggle('shown',on));b.textContent=on?'Hide all answers':'Show all answers'});
+});
+
+/* drawing stepper (any number of svgs / steps) */
+if(typeof DRAW!=='undefined'&&DRAW.length&&!document.querySelector('.drawblk')){
+  const N=DRAW.length,SVGS=[...document.querySelectorAll('.canvas svg')];
+  let DS=0,seen={0:1},playT=null;
+  function setStep(n){
+    DS=Math.max(0,Math.min(N-1,n));seen[DS]=1;
+    const d=DRAW[DS];
+    SVGS.forEach(s=>s.toggleAttribute('hidden',s.id!==d.svg));
+    const svg=document.getElementById(d.svg);void svg.getBoundingClientRect();
+    const mine=DRAW.map((x,i)=>i).filter(i=>DRAW[i].svg===d.svg),fin=DS===mine[mine.length-1];
+    svg.classList.toggle('svg-past',!fin);
+    svg.querySelectorAll('.layer').forEach(g=>{
+      const si=DRAW.findIndex(x=>x.layer===g.id),base=si<0;
+      g.classList.toggle('on',base||si<=DS);
+      g.classList.toggle('past',!base&&si<DS&&!fin);
+      g.classList.toggle('off',!base&&si>DS);
+    });
+    $('#sbox').innerHTML=`<span class="k">Step ${DS+1} of ${N} · ${d.k}</span><h3>${d.t}</h3><p class="en">${d.en}</p><p class="ar" lang="ar">${d.ar}</p>`;
+    $('#dots').innerHTML=DRAW.map((_,i)=>`<button data-s="${i}" class="${i===DS?'on':seen[i]?'seen':''}" aria-label="Step ${i+1}">${i+1}</button>`).join('');
+    $('#sPrev').disabled=DS===0;$('#sNext').disabled=DS===N-1;
+  }
+  function stopPlay(){clearInterval(playT);playT=null;$('#sPlay').textContent='Play all'}
+  $('#dots').addEventListener('click',e=>{const b=e.target.closest('button');if(b){stopPlay();setStep(+b.dataset.s)}});
+  $('#sPrev').addEventListener('click',()=>{stopPlay();setStep(DS-1)});
+  $('#sNext').addEventListener('click',()=>{stopPlay();setStep(DS+1)});
+  $('#sPlay').addEventListener('click',()=>{if(playT){stopPlay();return}setStep(0);$('#sPlay').textContent='Stop';playT=setInterval(()=>{if(DS>=N-1){stopPlay();return}setStep(DS+1)},4500)});
+  setStep(0);
+}
+
+/* sequential, slow drawing of a layer: box, arrow, box, arrow ... (only for box-and-arrow layers) */
+const SEQ=new WeakMap();
+function seqClear(g){clearTimeout(SEQ.get(g));g.querySelectorAll('*').forEach(e=>{e.style.transition='';e.style.opacity=''})}
+function seqGeneric(g,f){
+  const D=[...g.querySelectorAll('.dr')],F=[...g.querySelectorAll('.fl')],Lb=[...g.querySelectorAll('.lab')];
+  if(!D.length&&!F.length&&!Lb.length)return 0;
+  const A=D.filter(e=>e.classList.contains('arrowp'));
+  A.forEach(a=>{a.style.transition='none';a.style.opacity='0'});
+  void g.getBoundingClientRect();
+  let t=.3*f;
+  D.forEach(e=>{
+    if(e.classList.contains('arrowp')){e.style.transition=`stroke-dashoffset ${1*f}s ease ${t}s, opacity .2s linear ${t+.8*f}s`;t+=.9*f}
+    else{e.style.transition=`stroke-dashoffset ${1.3*f}s ease ${t}s`;t+=.9*f}
+  });
+  F.forEach((e,i)=>{e.style.transition=`opacity ${.9*f}s ease ${.3*f+i*Math.max(.35*f,(t-.3*f)/Math.max(F.length,1))}s`});
+  Lb.forEach((e,i)=>{e.style.transition=`opacity ${.7*f}s ease ${t+.1*f+i*.25*f}s`});
+  g._arr=A;
+  return t+(.1+.25*Lb.length+.8)*f;
+}
+function seqDraw(g,f){
+  const kids=[...g.children],N=[],A=[],O=[];
+  for(let i=0;i<kids.length;i++){
+    const k=kids[i];
+    if(k.tagName==='rect'&&k.classList.contains('fl')&&kids[i+2]&&kids[i+2].classList.contains('lab')){
+      (+k.getAttribute('width')>400?O:N).push([k,kids[i+1],kids[i+2]]);i+=2;
+    }else if(k.classList.contains('arrowp'))A.push(k);
+    else return seqGeneric(g,f);
+  }
+  A.forEach(a=>{a.style.transition='none';a.style.opacity='0'});
+  void g.getBoundingClientRect();
+  const seq=[],m=Math.max(N.length,A.length);
+  if(A.length>=N.length){for(let i=0;i<m;i++){if(A[i])seq.push(A[i]);if(N[i])seq.push(N[i])}}
+  else{for(let i=0;i<m;i++){if(N[i])seq.push(N[i]);if(A[i])seq.push(A[i])}}
+  O.forEach(o=>seq.push(o));
+  let t=0.3*f;
+  seq.forEach(u=>{
+    if(Array.isArray(u)){
+      u[1].style.transition=`stroke-dashoffset ${1.3*f}s ease ${t}s`;
+      u[0].style.transition=`opacity ${.9*f}s ease ${t+.5*f}s`;
+      u[2].style.transition=`opacity ${.7*f}s ease ${t+1*f}s`;
+      t+=1.6*f;
+    }else{
+      u.style.transition=`stroke-dashoffset ${.9*f}s ease ${t}s, opacity .2s linear ${t+.75*f}s`;
+      t+=1.0*f;
+    }
+  });
+  g._arr=A;
+  return t+.6*f;
+}
+
+/* per-topic drawing blocks */
+if(typeof DRAW!=='undefined'&&DRAW.length&&document.querySelector('.drawblk')){
+  document.querySelectorAll('.drawblk').forEach(root=>{
+    const ids=root.dataset.svgs.split(','),idx=DRAW.map((x,i)=>i).filter(i=>ids.includes(DRAW[i].svg)),N=idx.length;
+    const q=s=>root.querySelector(s),SV=[...root.querySelectorAll('.canvas svg')];
+    let DS=0,seen={0:1},playT=null;
+    function setStep(n,f){
+      f=f===0?0:(f||.55);let tot=0;
+      DS=Math.max(0,Math.min(N-1,n));seen[DS]=1;
+      const gi=idx[DS],d=DRAW[gi];
+      SV.forEach(s=>s.toggleAttribute('hidden',s.id!==d.svg));
+      const svg=document.getElementById(d.svg);void svg.getBoundingClientRect();
+      const mine=idx.filter(i=>DRAW[i].svg===d.svg),fin=gi===mine[mine.length-1];
+      svg.classList.toggle('svg-past',!fin);
+      const arrows=[];
+      svg.querySelectorAll('.layer').forEach(g=>{
+        const si=DRAW.findIndex(x=>x.layer===g.id),base=si<0;
+        const was=g.classList.contains('on'),will=base||si<=gi;
+        if(will&&!was){
+          if(si===gi&&f){tot=seqDraw(g,f)||0;if(tot){arrows.push(g);void g.getBoundingClientRect()}}else seqClear(g);
+        }else if(!will&&was)seqClear(g);
+        g.classList.toggle('on',will);
+        g.classList.toggle('past',!base&&si<gi&&!fin);
+        g.classList.toggle('off',!base&&si>gi);
+      });
+      arrows.forEach(g=>{(g._arr||[]).forEach(a=>{a.style.opacity='1'});SEQ.set(g,setTimeout(()=>seqClear(g),tot*1000+300))});
+      q('.sbox').innerHTML=`<span class="k">Step ${DS+1} of ${N} · ${d.k}</span><h3>${d.t}</h3><p class="en">${d.en}</p><p class="ar" lang="ar">${d.ar}</p>`;
+      q('.dots').innerHTML=idx.map((_,i)=>`<button data-s="${i}" class="${i===DS?'on':seen[i]?'seen':''}" aria-label="Step ${i+1}">${i+1}</button>`).join('');
+      q('.sPrev').disabled=DS===0;q('.sNext').disabled=DS===N-1;
+      return tot;
+    }
+    function stopPlay(){clearTimeout(playT);playT=null;q('.sPlay').textContent='Play all'}
+    function resetAll(){
+      const L=[];SV.forEach(s=>s.querySelectorAll('.layer').forEach(g=>L.push(g)));
+      L.forEach(g=>{clearTimeout(SEQ.get(g));g.style.transition='none';g.querySelectorAll('*').forEach(e=>{e.style.transition='none';e.style.opacity=''});g.classList.remove('on','past');g.classList.add('off')});
+      void root.offsetHeight;
+      L.forEach(g=>{g.style.transition='';g.querySelectorAll('*').forEach(e=>{e.style.transition=''})});
+    }
+    q('.dots').addEventListener('click',e=>{const b=e.target.closest('button');if(b){stopPlay();setStep(+b.dataset.s)}});
+    q('.sPrev').addEventListener('click',()=>{stopPlay();setStep(DS-1)});
+    q('.sNext').addEventListener('click',()=>{stopPlay();setStep(DS+1)});
+    q('.sPlay').addEventListener('click',()=>{
+      if(playT){stopPlay();return}
+      resetAll();q('.sPlay').textContent='Stop';
+      const run=n=>{const tot=setStep(n,1);playT=setTimeout(()=>{if(DS>=N-1){stopPlay();return}run(DS+1)},(tot||2)*1000+3800)};
+      run(0);
+    });
+    setStep(0,0);
+  });
+}
+
+/* question cards */
+let deck=CARDS.map((c,i)=>Object.assign({i},c)),pos=0,onlyRev=false,flipped=false;
+const CHIPS=PAGE.chips||['All'].concat([...new Set(CARDS.map(c=>c.ty))]).map(t=>({l:t,f:c=>t==='All'||c.ty===t}));
+let filt=CHIPS[0];
+$('#dchips').innerHTML=CHIPS.map((c,k)=>`<button class="chip${k===0?' on':''}" data-k="${k}">${c.l}</button>`).join('');
+function visible(){return deck.filter(c=>filt.f(c)&&(!onlyRev||S.cards[c.i]==='r'))}
+function renderCard(){
+  const v=visible();flipped=false;$('#flip').classList.remove('on');$('#rGot').disabled=$('#rRev').disabled=true;
+  const got=Object.values(S.cards).filter(x=>x==='g').length,rv=Object.values(S.cards).filter(x=>x==='r').length;
+  $('#score').innerHTML=`<b>${got} got it</b> · <u>${rv} review</u> · ${CARDS.length-got-rv} new`;
+  $('#dbar').style.width=(got/CARDS.length*100)+'%';
+  if(typeof afterCards==='function')afterCards();
+  if(!v.length){$('#inner').innerHTML=`<div class="face"><h3>${onlyRev?'No cards marked Review. Nice.':'No cards'}</h3><p class="hintx">${onlyRev?'Rate cards as Review and they will show here.':''}</p></div>`;return}
+  pos=Math.max(0,Math.min(pos,v.length-1));const c=v[pos];
+  $('#inner').innerHTML=`<button class="face front" id="front" aria-label="Show answer"><div class="tagr"><span class="ty">${c.ty}${c.tl?' · '+c.tl:''}</span><span class="cn">${pos+1} / ${v.length}</span></div><h3>${c.q}</h3>${c.opts?`<div class="opts">${c.opts.map((o,k)=>`<div><b class="mono">${'ABCD'[k]}</b>  ${o}</div>`).join('')}</div>`:''}<p class="hintx">Answer aloud first, then tap to flip.</p></button>
+  <div class="face back" id="backf"><div class="tagr"><span class="ty">Answer</span><span class="cn">${pos+1} / ${v.length}</span></div><div class="ans">${c.a}</div><p class="ar" lang="ar">${c.ar}</p></div>`;
+  $('#front').addEventListener('click',flip);
+}
+function flip(){flipped=!flipped;$('#flip').classList.toggle('on',flipped);$('#rGot').disabled=$('#rRev').disabled=!flipped}
+$('#flip').addEventListener('click',e=>{if(flipped&&e.target.closest('.back'))flip()});
+function rate(r){const v=visible();if(!v.length)return;S.cards[v[pos].i]=r;save();if(pos<v.length-1)pos++;renderCard()}
+$('#rGot').addEventListener('click',()=>rate('g'));$('#rRev').addEventListener('click',()=>rate('r'));
+$('#dNext').addEventListener('click',()=>{pos++;renderCard()});$('#dPrev').addEventListener('click',()=>{pos--;renderCard()});
+$('#dShuf').addEventListener('click',()=>{for(let i=deck.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[deck[i],deck[j]]=[deck[j],deck[i]]}pos=0;renderCard()});
+$('#dRev').addEventListener('click',()=>{onlyRev=!onlyRev;pos=0;$('#dRev').textContent=onlyRev?'Show all cards':'Only review cards';renderCard()});
+$('#dchips').addEventListener('click',e=>{const b=e.target.closest('.chip');if(!b)return;filt=CHIPS[+b.dataset.k];pos=0;document.querySelectorAll('#dchips .chip').forEach(x=>x.classList.toggle('on',x===b));renderCard()});
+renderCard();
+
+
+</script>
+
+</body></html>
